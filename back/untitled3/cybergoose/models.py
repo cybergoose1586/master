@@ -16,5 +16,8 @@ class Substance(models.Model):
             str(self.c),
         ])
 
+class Atmosphere(models.Model):
+    pAtm = models.FloatField(default=0)
+    TAtm = models.FloatField(default=0)
 
 
