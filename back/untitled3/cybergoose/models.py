@@ -5,9 +5,10 @@ class Substance(models.Model):
     name = models.CharField(max_length=30)
     c = models.FloatField(default=0)
     qBurn = models.FloatField(default=0)
-    Q = models.FloatField(default=0)
+    QCond = models.FloatField(default=0)
     TCond = models.FloatField(default=0)
     THeat = models.FloatField(default=0)
+    QHeat = models.FloatField(default=0)
 
     def __str__(self):
         return ' '.join([
