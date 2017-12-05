@@ -4,9 +4,7 @@
     <title>Cybergoose</title>
     <canvas id="myChart"></canvas>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-    <script>
-    
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -182,7 +180,34 @@
               <div class="container">
                       <div class="row">
                         <div class="col-sm">
-                         
+                          <div style="width:0%;">
+                          <div class="container">
+                            
+                              <canvas id="myChart" width="0" height="0"></canvas>
+                              <canvas id="myChart"></canvas>
+                          <script>    
+                          var ctx = document.getElementById('myChart').getContext('2d');
+                              var chart = new Chart(ctx, {
+                                  // The type of chart we want to create
+                                  type: 'line',
+                              
+                                  // The data for our dataset
+                                  data: {
+                                      labels: ["January", "February", "March"],
+                                      datasets: [{
+                                          label: "My First dataset",
+                                          backgroundColor: 'rgb(255, 99, 132)',
+                                          borderColor: 'rgb(255, 99, 132)',
+                                          data: [0, 10, 5, 2],
+                                      }]
+                                  },
+                              
+                                  // Configuration options go here
+                                  options: {}
+                              });
+                            </script>
+                              </div>
+                          </div>
                         </div>
                         <div class="col-sm">
                            
@@ -234,85 +259,7 @@
 </script>
   </head>
   <body>
-    <canvas id="myChart" width="23" height="123"></canvas>
-    <div style="width:75%;">
-        <canvas id="canvas"></canvas>
-    </div>
-    <button id="randomizeData">Randomize Data</button>
-    <script>
-    var randomScalingFactor = function() {
-        return Math.ceil(Math.random() * 10.0) * Math.pow(10, Math.ceil(Math.random() * 5));
-    };
-
-    var config = {
-        type: 'line',
-        data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
-            datasets: [{
-                label: "My First dataset",
-                backgroundColor: window.chartColors.red,
-                borderColor: window.chartColors.red,
-                fill: false,
-                data: [
-                    randomScalingFactor(), 
-                    randomScalingFactor(), 
-                    randomScalingFactor(), 
-                    randomScalingFactor(), 
-                    randomScalingFactor(), 
-                    randomScalingFactor(), 
-                    randomScalingFactor()
-                ],
-            }, {
-                label: "My Second dataset",
-                backgroundColor: window.chartColors.blue,
-                borderColor: window.chartColors.blue,
-                fill: false,
-                data: [
-                    randomScalingFactor(), 
-                    randomScalingFactor(), 
-                    randomScalingFactor(), 
-                    randomScalingFactor(), 
-                    randomScalingFactor(), 
-                    randomScalingFactor(), 
-                    randomScalingFactor()
-                ],
-            }]
-        },
-        options: {
-            responsive: true,
-            title:{
-                display:true,
-                text:'Chart.js Line Chart - Logarithmic'
-            },
-            scales: {
-                xAxes: [{
-                    display: true,
-                }],
-                yAxes: [{
-                    display: true,
-                    type: 'logarithmic',
-                }]
-            }
-        }
-    };
-
-    window.onload = function() {
-        var ctx = document.getElementById("canvas").getContext("2d");
-        window.myLine = new Chart(ctx, config);
-    };
-
-    document.getElementById('randomizeData').addEventListener('click', function() {
-        config.data.datasets.forEach(function(dataset) {
-            dataset.data = dataset.data.map(function() {
-                return randomScalingFactor();
-            });
-
-        });
-
-        window.myLine.update();
-    });
-    </script>
-    
+ 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
