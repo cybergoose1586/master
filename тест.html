@@ -20,14 +20,14 @@
     <style>
     body{
     background: #ADA996;
-    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #F2F2F2);
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #F2F2F2);
     }
     #menu {
      position: fixed;
      top: 0;
-     left: -1250px;
-     width: 1250px;
+     left: -500px;
+     width: 500px;
      height: 100%;
      padding: 50px 30px;
      -webkit-box-sizing: border-box;
@@ -38,14 +38,14 @@
      -o-transition: all .3s ease-in;
      transition: all .3s ease-in;
      text-align: center;
-     background-color: #fff;
+     background-color:white;
     }
     #menu .brand {
      height: 51px;
      font-size: 70px;
      font-weight: 900;
      line-height: .6;
-     color:#232629;
+     color:black;
     }
     #menu ul {
      padding: 0;
@@ -88,7 +88,7 @@
      transition: all .3s ease-in;
     }
     body.open .page-wrap {
-     margin-left: 1250px;
+     margin-left: 500px;
     }
     /* MENU TOGGLE ICON */
     button:focus {
@@ -142,7 +142,9 @@
       <option>Выберите вещество или наберите параметры вручную</option>
     </select></a></li>
      <p><li><a href="#"><input class="form-control" type="text" placeholder="введите температуру вещества"></a></li></p>
-     <p> <li><a href="#"><li><input class="form-control" type="text" placeholder="введите температуру вещества"></a></li></a></li></p>
+     <p> <li><a href="#"><li><input class="form-control" type="text" placeholder="введите массу вещества"></a></li></a></li></p>
+     <p> <li><a href="#"><li><input class="form-control" type="text" placeholder="введите давление окружающей среды"></a></li></a></li></p>
+     <p> <li><a href="#"><li><input class="form-control" type="text" placeholder="введите температуру окружающей среды"></a></li></a></li></p>
      </ul>
      </nav>
     
@@ -157,13 +159,13 @@
               <div class="container ">
                   <div class="row ">
                           <div class="col-sm text-light">
-                                  <h3>
+                                  <h2>
                                       <img src="картинка" width="45" height="45" 
                                       class="d-inline-block text-center " alt="">
                                       Cybergoose inc corporated
-                                  </h3>
+                                  </h2>
                           </div>
-                          <ul class="nav nav-pills nav-fill">
+                          <h3><ul class="nav nav-pills nav-fill">
                               <li class="nav-item">
                                 <a class="nav-link " href="#">Главная</a>
                               </li>
@@ -176,7 +178,7 @@
                               <li class="nav-item">
                                 <a class="nav-link " href="#">Отзыв</a>
                               </li>   
-                            </ul>
+                            </ul></h3>
                       </div>
                   </div>
               </div>  

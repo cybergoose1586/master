@@ -9,6 +9,126 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    !-- Загрузка базового класса Polymer.Element -->
+    
+    <link rel="import" href="bower_components/polymer/polymer-element.html">
+    
+    
+    <!-- Создание элемента my-element -->
+    
+    <dom-module id="my-element">
+    
+        <template>
+    
+            <style>
+    
+                /* Локальный DOM CSS стиль */
+    
+            </style>
+    
+            <!-- Локальный DOM -->
+    
+            Hello {{name}}!
+    
+        </template>
+    
+        <script>
+    
+            // Класс элемента MyElement наследуется от Polymer.Element
+    
+            class MyElement extends Polymer.Element {
+    
+    
+                /*
+    
+                 * Возвращает имя компонента
+    
+                 * @return String Имя компонента
+    
+                 */
+    
+                static get is () { return 'my-element'; }
+    
+    
+                /* 
+    
+                 * Возвращает конфигурационные данные компонента
+    
+                 * @return Object Конфигурация
+    
+                 */
+    
+                static get config () {
+    
+                    return {
+    
+                        properties: {
+    
+                           name: {            // Название параметра
+    
+                               type: String,  // Тип параметра
+    
+                               value: 'World' // Значение параметра
+    
+                           }
+    
+                        }
+    
+                    };
+    
+                }
+    
+    
+                /*
+    
+                 * Конструктор 
+    
+                 */
+    
+                constructor () {
+    
+                    // Вызов конструктора в родительском классе
+    
+                    super();
+    
+                }
+    
+    
+                /*
+    
+                 * Компонент вызван ( Добавлен в DOM )
+    
+                 */
+    
+                connectedCallback () {
+    
+                    super.connectedCallback();
+    
+                }
+    
+    
+                /*
+    
+                 * Компонент удален из DOM
+    
+                 */
+    
+                disconnectedCallback () 
+    
+                    super.disconnectedCallback();
+    
+                }
+    
+    
+            }
+    
+            // Регистрация элемента ( Спецификация Custom Elements v1 )
+    
+            customElements.define(MyElement.is, MyElement);
+    
+        </script>
+    
+    </dom-module>
     
     <style>
     body{
