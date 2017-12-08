@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
     
-    
+    <script>
+    var nto = 
+    function visual {}
+
+    </script>
     <style>
     body{
     background: #ADA996;
@@ -23,8 +27,8 @@
     #menu {
      position: fixed;
      top: 0;
-     left: -1450px;
-     width: 1450px;
+     left: -950px;
+     width: 950px;
      height: 100%;
      padding: 50px 30px;
      -webkit-box-sizing: border-box;
@@ -85,7 +89,7 @@
      transition: all .3s ease-in;
     }
     body.open .page-wrap {
-     margin-left: 1350px;
+     margin-left: 950px;
     }
     /* MENU TOGGLE ICON */
     button:focus {
@@ -138,7 +142,12 @@
      <li><a href="#"><select class="form-control">
       <option>Выберите вещество или наберите параметры вручную</option>
     </select></a></li>
-     <p><li><a href="#"><input class="form-control" type="text" placeholder="введите температуру вещества"></a></li></p>
+     <p><li><a href="#"><input class="form-control" type="text" placeholder="введите начальную температуру вещества"></a></li></p>
+     <p><li><a href="#"><input class="form-control" type="text" placeholder="введите конечную температуру вещества"></a></li></p>
+     <p><li><a href="#"><input class="form-control" type="text" placeholder="введите теплоёмкость вещества"></a></li></p>
+     <p><li><a href="#"><input class="form-control" type="text" placeholder="введите удельную теплоту плавления вещества"></a></li></p>
+     <p><li><a href="#"><input class="form-control" type="text" placeholder="введите массу вещества"></a></li></p>
+
      <li><a href="#">Item 3</a></li>
      </ul>
      </nav>
@@ -229,13 +238,13 @@
      }
     });
     </script>
-</script>
+
   </head>
   <body>
     <div style="width:45%;">
     <canvas id="myChart" width="120" height="70"></canvas>
     <canvas id="myChart"></canvas>
-<script>    
+<script onclick="visual">    
 var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
