@@ -15,7 +15,12 @@
     
     <script>
     var nto = 
-    function visual {}
+    function visual {
+var nt = document.getElementsByName("nt")[0].value
+
+
+
+    }
 
     </script>
     <style>
@@ -27,8 +32,8 @@
     #menu {
      position: fixed;
      top: 0;
-     left: -950px;
-     width: 950px;
+     left: -650px;
+     width: 650px;
      height: 100%;
      padding: 50px 30px;
      -webkit-box-sizing: border-box;
@@ -89,7 +94,7 @@
      transition: all .3s ease-in;
     }
     body.open .page-wrap {
-     margin-left: 950px;
+     margin-left: 650px;
     }
     /* MENU TOGGLE ICON */
     button:focus {
@@ -142,13 +147,13 @@
      <li><a href="#"><select class="form-control">
       <option>Выберите вещество или наберите параметры вручную</option>
     </select></a></li>
-     <p><li><a href="#"><input class="form-control" type="text" placeholder="введите начальную температуру вещества"></a></li></p>
-     <p><li><a href="#"><input class="form-control" type="text" placeholder="введите конечную температуру вещества"></a></li></p>
-     <p><li><a href="#"><input class="form-control" type="text" placeholder="введите теплоёмкость вещества"></a></li></p>
-     <p><li><a href="#"><input class="form-control" type="text" placeholder="введите удельную теплоту плавления вещества"></a></li></p>
-     <p><li><a href="#"><input class="form-control" type="text" placeholder="введите массу вещества"></a></li></p>
+     <p><li><a href="#"><input document.getElementsByName("nt")[0].value class="form-control" type="text" placeholder="введите начальную температуру вещества"></a></li></p>
+     <p><li><a href="#"><input document.getElementsByName("et")[0].value class="form-control" type="text" placeholder="введите конечную температуру вещества"></a></li></p>
+     <p><li><a href="#"><input document.getElementsByName("c")[0].value class="form-control" type="text" placeholder="введите теплоёмкость вещества"></a></li></p>
+     <p><li><a href="#"><input document.getElementsByName("l")[0].value class="form-control" type="text" placeholder="введите удельную теплоту плавления вещества"></a></li></p>
+     <p><li><a href="#"><input document.getElementsByName("m")[0].value class="form-control" type="text" placeholder="введите массу вещества"></a></li></p>
 
-     <li><a href="#">Item 3</a></li>
+    
      </ul>
      </nav>
     
