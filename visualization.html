@@ -14,13 +14,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
     
     <script>
-    var nto = 
+    
     function visual {
-var nt = document.getElementsByName("nt")[0].value
-
-
-
-    }
+var nt = document.getElementsByName("nt").value
+}
 
     </script>
     <style>
@@ -152,6 +149,7 @@ var nt = document.getElementsByName("nt")[0].value
      <p><li><a href="#"><input document.getElementsByName("c")[0].value class="form-control" type="text" placeholder="введите теплоёмкость вещества"></a></li></p>
      <p><li><a href="#"><input document.getElementsByName("l")[0].value class="form-control" type="text" placeholder="введите удельную теплоту плавления вещества"></a></li></p>
      <p><li><a href="#"><input document.getElementsByName("m")[0].value class="form-control" type="text" placeholder="введите массу вещества"></a></li></p>
+     <p><button type="button" onclick="visual" class="btn btn-success">применить</button></p>
 
     
      </ul>
@@ -249,7 +247,7 @@ var nt = document.getElementsByName("nt")[0].value
     <div style="width:45%;">
     <canvas id="myChart" width="120" height="70"></canvas>
     <canvas id="myChart"></canvas>
-<script onclick="visual">    
+<script onclick="visual" defer>    
 var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -265,7 +263,7 @@ var ctx = document.getElementById('myChart').getContext('2d');
                 backgroundColor: 'rgb(16, 143, 35)',
                 borderColor: 'rgb(16, 143, 35)',
                 data: [{
-        x: 10,
+        x: nt,
         y: 20
     }, {
         x: 15,
