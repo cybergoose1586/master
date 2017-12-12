@@ -196,55 +196,58 @@
               <div class="container">
                       <div class="row">
                         <div class="col-sm">
-                          <script>
-                            window.onload = function () {
-                            
-                            var dps = [];
-                            var chart = new CanvasJS.Chart("chartContainer", {
-                              exportEnabled: true,
-                              title :{
-                                text: "Dynamic Spline Chart"
-                              },
-                              axisY: {
-                                includeZero: false
-                              },
-                              data: [{
-                                type: "spline",
-                                markerSize: 0,
-                                dataPoints: dps 
-                              }]
-                            });
-                            
-                            var xVal = 0;
-                            var yVal = 100;
-                            var updateInterval = 1000;
-                            var dataLength = 50; // number of dataPoints visible at any point
-                            
-                            var updateChart = function (count) {
-                              count = count || 1;
-                              // count is number of times loop runs to generate random dataPoints.
-                              for (var j = 0; j < count; j++) {	
-                                yVal = yVal + Math.round(5 + Math.random() *(-5-5));
-                                dps.push({
-                                  x: xVal,
-                                  y: yVal
-                                });
-                                xVal++;
-                              }
-                              if (dps.length > dataLength) {
-                                dps.shift();
-                              }
-                              chart.render();
-                            };
-                            
-                            updateChart(dataLength); 
-                            setInterval(function(){ updateChart() }, updateInterval); 
-                            
-                            }
-                            </script>
+                            <h1><center>График</center></h1>
+                            <div class="container-fluid ">
+                                <div id="chartContainer" style="height: 300px; width: 100%;">
+                                <script>
+                                
+                                    window.onload = function () {
+                                    
+                                    var chart = new CanvasJS.Chart("chartContainer", {
+                                      animationEnabled: true,
+                                      theme: "light2",
+                                      title:{
+                                        text: "Simple Line Chart"
+                                      },
+                                      axisY:{
+                                        includeZero: false
+                                      },
+                                      data: [{        
+                                        type: "line",       
+                                        dataPoints: [
+                                          { y: 450 },
+                                          { y: 414},
+                                          { y: 520, indexLabel: "highest",markerColor: "red", markerType: "triangle" },
+                                          { y: 460 },
+                                          { y: 450 },
+                                          { y: 500 },
+                                          { y: 480 },
+                                          { y: 480 },
+                                          { y: 410 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+                                          { y: 500 },
+                                          { y: 480 },
+                                          { y: 510 }
+                                        ]
+                                      }]
+                                    });
+                                    chart.render();
+                                    
+                                    }
+                                    </script> 
+                                </div>
+                              </div>
+           
                         </div>
                         <div class="col-sm">
-                           
+                          <h1><center>Меню</center></h1>
+                          <div class="container-fluid">
+  <p><li><a href="#"><input document.getElementsByName("nt")[0].value class="form-control" type="text" placeholder="введите начальную температуру вещества"></a></li></p>
+     <p><li><a href="#"><input document.getElementsByName("et")[0].value class="form-control" type="text" placeholder="введите конечную температуру вещества"></a></li></p>
+     <p><li><a href="#"><input document.getElementsByName("c")[0].value class="form-control" type="text" placeholder="введите теплоёмкость вещества"></a></li></p>
+     <p><li><a href="#"><input document.getElementsByName("l")[0].value class="form-control" type="text" placeholder="введите удельную теплоту плавления вещества"></a></li></p>
+     <p><li><a href="#"><input document.getElementsByName("m")[0].value class="form-control" type="text" placeholder="введите массу вещества"></a></li></p>
+     <p><button type="button" onclick="visual" class="btn btn-success">применить</button></p>
+                          </div>
                         
                                 
                                 </div>
@@ -294,7 +297,7 @@
   </head>
   <body>
     
-    <div id="chartContainer" style="height: 120px; width: 20%;"></div>
+   
   </script>
     </div>
     <!-- Optional JavaScript -->
