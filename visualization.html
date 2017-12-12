@@ -52,43 +52,58 @@
                         <div class="col-sm">
                             <h1><center>График</center></h1>
                             <div class="container-fluid ">
-                                <div id="chartContainer" style="height: 300px; width: 100%;">
-                                <script>
+                                <canvas id="myChart" width="400" height="250">
+                    <script>
+                     var canvas = document.getElementById('myChart');
+                     function addData(chart, label, data) {
+    chart.data.labels.push(label);
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+    });
+    chart.update();
+}
+var data = {
+  labels: ["January", "February", "March", "April", "May", "June", "July"],
+  datasets: [{
+    label: "My First dataset",
+    fill: false,
+    lineTension: 0.1,
+    backgroundColor: "rgba(75,192,192,0.4)",
+    borderColor: "rgba(75,192,192,1)",
+    borderCapStyle: 'butt',
+    borderDash: [],
+    borderDashOffset: 0.0,
+    borderJoinStyle: 'miter',
+    pointBorderColor: "rgba(75,192,192,1)",
+    pointBackgroundColor: "#fff",
+    pointBorderWidth: 1,
+    pointHoverRadius: 5,
+    pointHoverBackgroundColor: "rgba(75,192,192,1)",
+    pointHoverBorderColor: "rgba(220,220,220,1)",
+    pointHoverBorderWidth: 2,
+    pointRadius: 5,
+    pointHitRadius: 10,
+    data: [65, 59, 80, 0, 56, 55, 40],
+  }]
+};
+
+function adddata() {
+  myLineChart.data.datasets[0].data.push(60);
+  myLineChart.data.labels.push("Newly Added");
+  myLineChart.update();
+};
+
+var option = {
+  showLines: true
+};
+var myLineChart = Chart.Line(canvas, {
+  data: data,
+  options: option
+});
+                     </script>
+                                </canvas>
+                     <input type="button" value="Add Data" onclick="adddata()">
                                 
-                                    window.onload = function () {
-                                    
-                                    var chart = new CanvasJS.Chart("chartContainer", {
-                                      animationEnabled: true,
-                                      theme: "light2",
-                                      title:{
-                                        text: "Simple Line Chart"
-                                      },
-                                      axisY:{
-                                        includeZero: false
-                                      },
-                                      data: [{        
-                                        type: "line",       
-                                        dataPoints: [
-                                          { y: 450 },
-                                          { y: 414},
-                                          { y: 520, indexLabel: "highest",markerColor: "red", markerType: "triangle" },
-                                          { y: 460 },
-                                          { y: 450 },
-                                          { y: 500 },
-                                          { y: 480 },
-                                          { y: 480 },
-                                          { y: 410 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
-                                          { y: 500 },
-                                          { y: 480 },
-                                          { y: 510 }
-                                        ]
-                                      }]
-                                    });
-                                    chart.render();
-                                    
-                                    }
-                                    </script> 
-                                </div>
                               </div>
            
                         </div>
@@ -113,40 +128,6 @@
     
     </div>
     
-    <script>
-    //Exelent little functions to use any time when class modification is needed
-    function hasClass(ele, cls) {
-     return !!ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
-    }
-    function addClass(ele, cls) {
-     if (!hasClass(ele, cls)) ele.className += " " + cls;
-    }
-    function removeClass(ele, cls) {
-     if (hasClass(ele, cls)) {
-     var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
-     ele.className = ele.className.replace(reg, ' ');
-     }
-    }
-    //Add event from js the keep the marup clean
-    function init() {
-     document.getElementById("menu-toggle").addEventListener("click", toggleMenu);
-    }
-    //The actual fuction
-    function toggleMenu() {
-     var ele = document.getElementsByTagName('body')[0];
-     if (!hasClass(ele, "open")) {
-     addClass(ele, "open");
-     } else {
-     removeClass(ele, "open");
-     }
-    }
-    //Prevent the function to run before the document is loaded
-    document.addEventListener('readystatechange', function() {
-     if (document.readyState === "complete") {
-     init();
-     }
-    });
-    </script>
 
   </head>
   <body>
@@ -160,5 +141,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> 
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   </body>
 </html>
