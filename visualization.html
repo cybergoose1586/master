@@ -13,10 +13,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
   
-      <script>
-      var nt;
-      nt = id="y1"
-      </script>
+
  <style>
  
  .addp {
@@ -66,7 +63,6 @@
                         
                                     <div style="width:75%;">
         <canvas id="myChart" width="120" height="100"></canvas>
-        <canvas id="myChart"></canvas>
         <script>
           var canvas = document.getElementById('myChart');
           var data = {
@@ -90,16 +86,20 @@
               pointHoverBorderWidth: 2,
               pointRadius: 5,
               pointHitRadius: 10,
-              data: [12, 14 ,17],
+              data: [],
             }]
           };
           
           function adddata() {
+            var nt = Number(document.getElementById('nt').value);
+            var x = Number(document.getElementById('x1').value) ;
+            var y = Number(document.getElementById('y1').value) ;
+
             myLineChart.data.datasets[0].data.push({
-              x: document.getElementById('x1').value,
+              x: String(x/nt),
               y: document.getElementById('y1').value
             });
-            myLineChart.data.labels.push(document.getElementById('name').value);
+            myLineChart.data.labels.push(document.getElementById('nt').value);
             myLineChart.update();
           }
           
@@ -124,7 +124,7 @@
                         <div class="col-sm">
                           <h1><center>Меню</center></h1>
                           <div class="container-fluid">
-  <p><li><a id="name" href="#"><input document.getElementsByName("nt")[0].value class="form-control" ikc type="text" placeholder="введите начальную температуру вещества"></a></li></p>
+  <p><li><a  href="#"><input id="nt" class="form-control"  type="text" placeholder="введите начальную температуру вещества"></a></li></p>
 
   <p><li><a href="#"><input document.getElementsByName("et")[0].value  class="form-control" type="text" placeholder="введите конечную температуру вещества"></a></li></p>
      <p><li><a href="#"><input document.getElementsByName("c")[0].value class="form-control" type="text" placeholder="введите теплоёмкость вещества"></a></li></p>
