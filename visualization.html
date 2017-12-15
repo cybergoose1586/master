@@ -13,13 +13,19 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
   
+      <script>
+      var nt;
+      nt = id="y1"
+      </script>
  <style>
- .arroiz {
+ 
+ .addp {
    background: rgba(26, 184, 26, 0.89);
    color: white;
     width: 520px;
     height: 35px;
 }
+
  </style>
     
     <div class="container-fluid"><div class="row">
@@ -84,7 +90,7 @@
               pointHoverBorderWidth: 2,
               pointRadius: 5,
               pointHitRadius: 10,
-              data: [],
+              data: [12, 14 ,17],
             }]
           };
           
@@ -106,7 +112,10 @@
             options: option
           });
         </script>
-       
+       <input type="button" value="Add Data" onclick="adddata()">
+
+<input id="x1" type="text" size="40" placeholder="x">
+<input id="y1" type="text" size="40" placeholder="y">
     </div>
                                 
                               </div>
@@ -115,12 +124,14 @@
                         <div class="col-sm">
                           <h1><center>Меню</center></h1>
                           <div class="container-fluid">
-  <p><li><a href="#"><input document.getElementsByName("nt")[0].value class="form-control" type="text" placeholder="введите начальную температуру вещества"></a></li></p>
-     <p><li><a href="#"><input document.getElementsByName("et")[0].value class="form-control" type="text" placeholder="введите конечную температуру вещества"></a></li></p>
+  <p><li><a id="name" href="#"><input document.getElementsByName("nt")[0].value class="form-control" ikc type="text" placeholder="введите начальную температуру вещества"></a></li></p>
+  <input class="ikc" type="text" size="40" placeholder="введите начальную температуру вещества">
+  
+  <p><li><a href="#"><input document.getElementsByName("et")[0].value class = "ikc" class="form-control" type="text" placeholder="введите конечную температуру вещества"></a></li></p>
      <p><li><a href="#"><input document.getElementsByName("c")[0].value class="form-control" type="text" placeholder="введите теплоёмкость вещества"></a></li></p>
      <p><li><a href="#"><input document.getElementsByName("l")[0].value class="form-control" type="text" placeholder="введите удельную теплоту плавления вещества"></a></li></p>
      <p><li><a href="#"><input document.getElementsByName("m")[0].value class="form-control" type="text" placeholder="введите массу вещества"></a></li></p>
-     <p><button type="button" value="Add Data" onclick="adddata()" class="arroiz">применить</button></p>
+     <p><button type="button" value="Add Data" onclick="adddata()" class="addp">применить</button></p>
                           </div>
                         
                                 
