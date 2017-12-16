@@ -96,16 +96,17 @@
               var nt = Number(document.getElementById('nt').value);
               var x = Number(document.getElementById('x1').value) ;
               var y = Number(document.getElementById('y1').value) ;
-              var y = Number(document.getElementById('et').value) ;
-              var y = Number(document.getElementById('c').value) ;
-              var y = Number(document.getElementById('l').value) ;
-              var y = Number(document.getElementById('m').value) ;
-              var y = Number(document.getElementById('kpd').value) ;
-              var y = Number(document.getElementById('pn').value) ;
+              var et = Number(document.getElementById('et').value) ;
+              var c = Number(document.getElementById('c').value) ;
+              var lambda = Number(document.getElementById('lambda').value) ;
+              var m = Number(document.getElementById('m').value) ;
+              var kpd = Number(document.getElementById('kpd').value) ;
+              var pn = Number(document.getElementById('pn').value) ;
+              var l = Number(document.getElementById('l').value) ;
   
               myLineChart.data.datasets[0].data.push({
                 x: String(x+nt),
-                y: document.getElementById('y1').value
+                y: String()
               });
               myLineChart.data.labels.push(document.getElementById('nt').value);
               myLineChart.update();
@@ -135,9 +136,9 @@
     <div class="container-fluid">
       <p><li><a  href="#"><input id="nt" class="form-control"  type="text" placeholder="введите начальную температуру вещества"></a></li></p>
       <p><li><a href="#"><input id="et" class="form-control" type="text" placeholder="введите конечную температуру вещества"></a></li></p>
-      <p><li><a href="#"><input id="et" class="form-control" type="text" placeholder="введите температуру плавления/кристаллизации вещества"></a></li></p>
+      <p><li><a href="#"><input id="lambda" class="form-control" type="text" placeholder="введите температуру плавления/кристаллизации вещества"></a></li></p>
+      <p><li><a href="#"><input id="l" class="form-control" type="text" placeholder="введите температуру парообразования вещества"></a></li></p>
       <p><li><a href="#"><input id="c"  class="form-control" type="text" placeholder="введите теплоёмкость вещества"></a></li></p>
-      <p><li><a href="#"><input id ="l"  class="form-control" type="text" placeholder="введите удельную теплоту плавления вещества"></a></li></p>
       <p><li><a href="#"><input id="m" class="form-control" type="text" placeholder="введите массу вещества"></a></li></p>
       <p><li><a href="#"><input id="kpd" class="form-control" type="text" placeholder="введите КПД "></a></li></p>
       <p><li><a href="#"><input id="pn" class="form-control" type="text" placeholder="введите мощность нагревателя "></a></li></p>
