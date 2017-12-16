@@ -12,5 +12,6 @@ urlpatterns = [
     url(r'^enter/reg/visual/', views.visualization, name='visualization'),
     url(r'^enter/visual/', views.visualization, name='visualization'),
     url(r'^visual/', views.visualization, name='visualization'),
+    url(r'^boyy/', views.netrogay, name='netrogay'),
 
 ]
