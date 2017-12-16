@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from cybergoose.models import Substance
 
 def about_us(request):
     return render(request, "about_us.html")
@@ -28,3 +28,14 @@ def netrogay(request):
     return render(request, 'ne trogay, ubet.html')
 def netrogay(request):
     return HttpResponse("hello!, " + request.GET['TEXT_1'] + " " + request.GET['TEXT_2'])
+# 2
+def take(name):
+    for i in Substance.objects.values():
+        if i['name'] == name:
+            return i
+    return -1
+
+
+
+
+
