@@ -96,18 +96,68 @@
               var nt = Number(document.getElementById('nt').value);
               var x = 0 ;
               var y = 0 ;
-              var et = Number(document.getElementById('et').value) ;
-              var c = Number(document.getElementById('c').value) ;
-              var lambda = Number(document.getElementById('lambda').value) ;
+              var et = Number(document.getElementById('et').value) ; 
+              var tplav = Number(document.getElementById('tplav').value) ;
               var m = Number(document.getElementById('m').value) ;
               var kpd = Number(document.getElementById('kpd').value) ;
               var pn = Number(document.getElementById('pn').value) ;
               var l = Number(document.getElementById('l').value) ;
+              var lambda = Number(document.getElementById('lambda').value) ;
+              var tparoobraz = Number(document.getElementById('tparoobraz').value);
+              var Ctverdoe = Number(document.getElementById('Ctverdoe').value);
+              var Czhidkoe = Number(document.getElementById('Czhidkoe').value);
+              var x1 = 0;
+              var y1 = nt;
+              var x2 = ((Ctverdoe*m*(tplav-nt))/(kpd+pn));
+              var y2 = tplav;
+              var x3 = (lambda*m)/(kpd*pn)+x2;
+              var y3 = y2;
+              var x4 = ((Czhidkoe*m*(tparoobraz-tplav))/(kpd+pn)) + x3;
+              var y4 = tparoobraz;
+              var x5 = (l*m)/(kpd*pn)+x4;
+              var y5 = y4;
+              var x6= (x5+x4)-x3;
+              var y6=y2 ;
+              var x7= x6+(x3-x2);
+              var y7= y2;
+              var x8= x7+(x2-x1);
+              var y8= nt;
+              
+              
   
               myLineChart.data.datasets[0].data.push({
-                x: String(x+(lambda*m)),
-                y: String(y+(c*m*(et-nt))),
+                x: String(x1),
+                y: String(y1),
               });
+              myLineChart.data.datasets[0].data.push({
+                x: String(x2),
+                y: String(y2),
+              });
+              myLineChart.data.datasets[0].data.push({
+                x: String(x3),
+                y: String(y3),
+              });
+              myLineChart.data.datasets[0].data.push({
+                x: String(x4),
+                y: String(y4),
+              });
+              myLineChart.data.datasets[0].data.push({
+                x: String(x5),
+                y: String(y5),
+              });
+              myLineChart.data.datasets[0].data.push({
+                x: String(x6),
+                y: String(y6),
+              });
+              myLineChart.data.datasets[0].data.push({
+                x: String(x7),
+                y: String(y7),
+              });
+              myLineChart.data.datasets[0].data.push({
+                x: String(x8),
+                y: String(y8),
+              });
+
               myLineChart.data.labels.push(document.getElementById('nt').value);
               myLineChart.update();
             }
@@ -136,9 +186,13 @@
     <div class="container-fluid">
       <p><li><a  href="#"><input id="nt" class="form-control"  type="text" placeholder="введите начальную температуру вещества"></a></li></p>
       <p><li><a href="#"><input id="et" class="form-control" type="text" placeholder="введите конечную температуру вещества"></a></li></p>
-      <p><li><a href="#"><input id="lambda" class="form-control" type="text" placeholder="введите температуру плавления/кристаллизации вещества"></a></li></p>
-      <p><li><a href="#"><input id="l" class="form-control" type="text" placeholder="введите температуру парообразования вещества"></a></li></p>
-      <p><li><a href="#"><input id="c"  class="form-control" type="text" placeholder="введите теплоёмкость вещества"></a></li></p>
+      <p><li><a href="#"><input id="tplav" class="form-control" type="text" placeholder="введите температуру плавления/кристаллизации вещества"></a></li></p>
+      <p><li><a href="#"><input id="tparoobraz" class="form-control" type="text" placeholder="введите температуру парообразования вещества"></a></li></p>
+      <p><li><a href="#"><input id="l" class="form-control" type="text" placeholder="введите удельную теплоту парообразования"></a></li></p>
+      <p><li><a href="#"><input id="lambda" class="form-control" type="text" placeholder="введите удельную теплоту плавления"></a></li></p>
+      <p><li><a href="#"><input id="Czhidkoe"  class="form-control" type="text" placeholder="введите теплоёмкость вещества в жидком состоянии"></a></li></p>
+     
+      <p><li><a href="#"><input id="Ctverdoe"  class="form-control" type="text" placeholder="введите теплоёмкость вещества в твёрдом состоянии"></a></li></p>
       <p><li><a href="#"><input id="m" class="form-control" type="text" placeholder="введите массу вещества"></a></li></p>
       <p><li><a href="#"><input id="kpd" class="form-control" type="text" placeholder="введите КПД "></a></li></p>
       <p><li><a href="#"><input id="pn" class="form-control" type="text" placeholder="введите мощность нагревателя "></a></li></p>
