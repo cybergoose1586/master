@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+
 
 def about_us(request):
     return render(request, "about_us.html")
@@ -22,3 +24,7 @@ def test(request):
     return render(request, "test.html")
 
 
+def netrogay(request):
+    return render(request, 'ne trogay, ubet.html')
+def netrogay(request):
+    return HttpResponse("hello!, " + request.GET['TEXT_1'] + " " + request.GET['TEXT_2'])
