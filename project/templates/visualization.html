@@ -122,19 +122,19 @@
             };
             
             function adddata() {
-              var nt = Number(document.getElementById('nt').value);
+              var nt = Number(document.getElementById('nt').value);//начальная температура
               var x = 0 ;
               var y = 0 ;
-              var et = Number(document.getElementById('et').value) ; 
-              var tplav = Number(document.getElementById('tplav').value) ;
-              var m = Number(document.getElementById('m').value) ;
-              var kpd = Number(document.getElementById('kpd').value) ;
-              var pn = Number(document.getElementById('pn').value) ;
-              var l = Number(document.getElementById('l').value) ;
-              var lambda = Number(document.getElementById('lambda').value) ;
-              var tparoobraz = Number(document.getElementById('tparoobraz').value);
-              var Ctverdoe = Number(document.getElementById('Ctverdoe').value);
-              var Czhidkoe = Number(document.getElementById('Czhidkoe').value);
+              var et = Number(document.getElementById('et').value) ; //конечная температура
+              var tplav = Number(document.getElementById('tplav').value) ;//температура плавления
+              var m = Number(document.getElementById('m').value) ;//масса
+              var kpd = Number(document.getElementById('kpd').value) ;//кпд
+              var pn = Number(document.getElementById('pn').value) ;//мощность нагревателя
+              var l = Number(document.getElementById('l').value) ;//удельная теплота парообразования
+              var lambda = Number(document.getElementById('lambda').value) ;//удельная теплота плавления
+              var tparoobraz = Number(document.getElementById('tparoobraz').value);//температура парообразования
+              var Ctverdoe = Number(document.getElementById('Ctverdoe').value);//теплоёмкость в твёрдом
+              var Czhidkoe = Number(document.getElementById('Czhidkoe').value);//теплоёмкость в жидком
               var x1 = 0;
               var y1 = nt;
               var x2 = ((Ctverdoe*m*(tplav-nt))/(kpd+pn));
