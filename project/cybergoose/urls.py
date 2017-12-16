@@ -3,7 +3,7 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.test, name='test'),
+    url(r'', views.test, name='test'),
     url(r'^feedback/', views.feedback, name='feedback'),
     url(r'^enter$', views.enter, name='enter'),
     url(r'^enter/error$', views.error, name='error'),
