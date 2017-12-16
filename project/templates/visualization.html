@@ -94,8 +94,8 @@
             
             function adddata() {
               var nt = Number(document.getElementById('nt').value);
-              var x = Number(document.getElementById('x1').value) ;
-              var y = Number(document.getElementById('y1').value) ;
+              var x = 0 ;
+              var y = 0 ;
               var et = Number(document.getElementById('et').value) ;
               var c = Number(document.getElementById('c').value) ;
               var lambda = Number(document.getElementById('lambda').value) ;
@@ -105,8 +105,8 @@
               var l = Number(document.getElementById('l').value) ;
   
               myLineChart.data.datasets[0].data.push({
-                x: String(x+nt),
-                y: String()
+                x: String(x+(lambda*m)),
+                y: String(y+(c*m*(et-nt))),
               });
               myLineChart.data.labels.push(document.getElementById('nt').value);
               myLineChart.update();
@@ -123,8 +123,8 @@
           </script>
     
   
-  <input id="x1" type="text" size="40" placeholder="x">
-  <input id="y1" type="text" size="40" placeholder="y">
+
+  
                                 </div>
                                   
                               </div>
