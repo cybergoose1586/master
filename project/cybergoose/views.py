@@ -16,7 +16,7 @@ def settings(request):
     return render(request, "settings.html")
 def somethung(request):
     return render(request, "something.html")
-def vizualization(request):
+def visualization(request):
     return render(request, "visualization.html")
 def test(request):
     return render(request, "test.html")
