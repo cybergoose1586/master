@@ -15,6 +15,10 @@
   
 
     <style>
+    #cv{width: 520px;
+    background: white;
+    color: black;
+    }
     .addp {
       background: rgba(26, 184, 26, 0.89);
       color: white;
@@ -184,6 +188,16 @@
   <div class="col-sm">
     <h1><center> Меню </center></h1>
     <div class="container-fluid">
+        <div class="dropdown" >
+            <button class="btn btn-secondary dropdown-toggle" id="cv" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              выберите вещество или введите свои данные
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">спирт</a>
+              <a class="dropdown-item" href="#">вода</a>
+              <a class="dropdown-item" href="#">ртуть</a>
+            </div>
+          </div>
       <p><li><a  href="#"><input id="nt" class="form-control"  type="text" placeholder="введите начальную температуру вещества"></a></li></p>
       <p><li><a href="#"><input id="et" class="form-control" type="text" placeholder="введите конечную температуру вещества"></a></li></p>
       <p><li><a href="#"><input id="tplav" class="form-control" type="text" placeholder="введите температуру плавления/кристаллизации вещества"></a></li></p>
