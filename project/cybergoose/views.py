@@ -15,7 +15,7 @@ def registration(request):
     return render(request, "registration.html")
 def settings(request):
     return render(request, "settings.html")
-def somethung(request):
+def something(request):
     return render(request, "something.html")
 def visualization(request):
     return render(request, "visualization.html")
