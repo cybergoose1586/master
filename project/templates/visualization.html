@@ -15,9 +15,10 @@
   
 
     <style>
-      body { min-width: 350px;}
+       #ff{width: 100px}
+      body { min-width: 100px;}
       #griphicandmenu{width: 100%}
-    #cv{width: 510px;
+    #cv{width: 100px;
     background: white;
     color: black;
     box-shadow: black;
@@ -29,7 +30,7 @@
     .addp {
       background: rgba(26, 184, 26, 0.89);
       color: white;
-        width: 510px;
+        width: 100px;
         height: 35px;
     }
     </style>
@@ -215,17 +216,17 @@
   <div class="col-sm" id="griphicandmenu">
     <h1><center> Меню </center></h1>
     <div class="container-fluid">
-        <div class="dropdown" >
-            <button class="btn btn-secondary dropdown-toggle" id="cv" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              выберите вещество или введите свои данные
+    <center><div class="dropdown" >
+           <center><button class="btn btn-secondary dropdown-toggle" id="cv" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              вещества
             </button>
             <p></p><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"></p>
               <a class="dropdown-item" href="#">спирт</a>
               <a class="dropdown-item" href="#">вода</a>
               <a class="dropdown-item" href="#">ртуть</a>
-            </div>
+            </div></center>
           </div>
-      <p><input id="nt" class="form-control"  type="text" placeholder="введите начальную температуру вещества"></p>
+      <p><input id="nt"  class="form-control"  type="text" placeholder="введите начальную температуру вещества"></p>
       <p><input id="et" class="form-control" type="text" placeholder="введите конечную температуру вещества"></p>
       <p><input id="tplav" class="form-control" type="text" placeholder="введите температуру плавления/кристаллизации вещества"></p>
       <p><input id="tparoobraz" class="form-control" type="text" placeholder="введите температуру парообразования вещества"></p>
