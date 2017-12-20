@@ -13,5 +13,5 @@ urlpatterns = [
     url(r'^enter/reg/visual/', views.visualization, name='visualization'),
     url(r'^enter/visual/', views.visualization, name='visualization'),
     url(r'^visual/', views.visualization, name='visualization'),
-    url(r'^headap', views.HeaderUpdate, name = 'HeaderUpdate'),
+    url(r'^headap', views.HeaderUpdate, name='HeaderUpdate'),
 ]
