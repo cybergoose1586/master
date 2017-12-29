@@ -139,7 +139,7 @@ color: black }
               }]
             };
             
-            function adddata() {
+            function adddata()  {
               var nt = Number(document.getElementById('nt').value);//начальная температура
               var x = 0 ;
               var y = 0 ;
@@ -171,7 +171,7 @@ color: black }
               var y8= nt;
               
               
-  
+   if (nt<0){
               myLineChart.data.datasets[0].data.push({
                 x: String(x1),
                 y: String(y1),
@@ -207,6 +207,63 @@ color: black }
 
               myLineChart.data.labels.push(document.getElementById('nt').value);
               myLineChart.update();
+            }
+            if(nt>=0){
+             
+              myLineChart.data.datasets[0].data.push({
+                x: String(x3),
+                y: String(y3),
+              });
+              myLineChart.data.datasets[0].data.push({
+                x: String(x4),
+                y: String(y4),
+              });
+              myLineChart.data.datasets[0].data.push({
+                x: String(x5),
+                y: String(y5),
+              });
+              myLineChart.data.datasets[0].data.push({
+                x: String(x6),
+                y: String(y6),
+              });
+              myLineChart.data.datasets[0].data.push({
+                x: String(x7),
+                y: String(y7),
+              });
+              myLineChart.data.datasets[0].data.push({
+                x: String(x8),
+                y: String(y8),
+              });
+
+              myLineChart.data.labels.push(document.getElementById('nt').value);
+              myLineChart.update();
+            }
+            if(nt>=l){{
+            
+              myLineChart.data.datasets[0].data.push({
+                x: String(x4),
+                y: String(y4),
+              });
+              myLineChart.data.datasets[0].data.push({
+                x: String(x5),
+                y: String(y5),
+              });
+              myLineChart.data.datasets[0].data.push({
+                x: String(x6),
+                y: String(y6),
+              });
+              myLineChart.data.datasets[0].data.push({
+                x: String(x7),
+                y: String(y7),
+              });
+              myLineChart.data.datasets[0].data.push({
+                x: String(x8),
+                y: String(y8),
+              });
+
+              myLineChart.data.labels.push(document.getElementById('nt').value);
+              myLineChart.update();
+            }}
             }
             
             var option = {
