@@ -102,11 +102,11 @@ color: black }
   </div>  
     
     
-      <div class="alert alert-dark" role="alert">
+      <div class="alert alert-dark" role="alert" >
         <!--Graph--> 
         <div class="container" id="griphicandmenu">
                         <div class="row">
-                          <div class="col-sm">
+                          <div class="col-sm" >
                               <h1><center>График</center></h1>
                               <div class="container-fluid ">
                           
@@ -171,7 +171,7 @@ color: black }
               var y8= nt;
               
               
-   if (nt<0){
+
               myLineChart.data.datasets[0].data.push({
                 x: String(x1),
                 y: String(y1),
@@ -208,64 +208,6 @@ color: black }
               myLineChart.data.labels.push(document.getElementById('nt').value);
               myLineChart.update();
             }
-            if(nt>=0){
-             
-              myLineChart.data.datasets[0].data.push({
-                x: String(x3),
-                y: String(y3),
-              });
-              myLineChart.data.datasets[0].data.push({
-                x: String(x4),
-                y: String(y4),
-              });
-              myLineChart.data.datasets[0].data.push({
-                x: String(x5),
-                y: String(y5),
-              });
-              myLineChart.data.datasets[0].data.push({
-                x: String(x6),
-                y: String(y6),
-              });
-              myLineChart.data.datasets[0].data.push({
-                x: String(x7),
-                y: String(y7),
-              });
-              myLineChart.data.datasets[0].data.push({
-                x: String(x8),
-                y: String(y8),
-              });
-
-              myLineChart.data.labels.push(document.getElementById('nt').value);
-              myLineChart.update();
-            }
-            if(nt>=l){{
-            
-              myLineChart.data.datasets[0].data.push({
-                x: String(x4),
-                y: String(y4),
-              });
-              myLineChart.data.datasets[0].data.push({
-                x: String(x5),
-                y: String(y5),
-              });
-              myLineChart.data.datasets[0].data.push({
-                x: String(x6),
-                y: String(y6),
-              });
-              myLineChart.data.datasets[0].data.push({
-                x: String(x7),
-                y: String(y7),
-              });
-              myLineChart.data.datasets[0].data.push({
-                x: String(x8),
-                y: String(y8),
-              });
-
-              myLineChart.data.labels.push(document.getElementById('nt').value);
-              myLineChart.update();
-            }}
-            }
-            
             var option = {
               showLines: true
             };
