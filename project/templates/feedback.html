@@ -1,6 +1,6 @@
 <html lang="en">
   <head>
-      <title>Feedback</title>
+      <title>Отзыв</title>
 
       <style>
 
@@ -34,104 +34,97 @@ color: black; }
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link href='custom.css' rel='stylesheet' type='text/css'>
   </head>
+
   <body>
    
-                <div class="jumbotron jumbotron-fluid bg-dark">
-                        <div class="container ">
-                            <div class="row ">
-                                    <div class="col-sm text-light">
-                                            <h3>
-                                                <img src="логотип сервиса" width="45" height="45" 
-                                                class="d-inline-block text-center " alt="">
-                                                Cybergoose inc
-                                            </h3>
-                                    </div>
-                                    <ul class="nav nav-pills nav-fill">
-											<li class="nav-item">
-											  <a class="nav-link " id="button8" href="http://127.0.0.1:8000/cybergoose">Главная</a>
-											</li>
-											<li class="nav-item">
-											  <a class="nav-link" id="button8" href="http://127.0.0.1:8000/visual">Визуализация</a>
-											</li>
-											<li class="nav-item">
-											  <a class="nav-link" id="button8" href="http://127.0.0.1:8000/aboutus">О нас</a>
-											</li>
-											<li class="nav-item">
-											  <a class="nav-link" id="button8" href="http://127.0.0.1:8000/feedback">Отзыв</a>
-											</li>
-										<div class="w-100"></div>
-										<div class="col">
-										</div>
-										<div class="col">
-                    </div>
-										<div class="col">
-											<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js">
-											</script>
-											<script src="https://yastatic.net/share2/share.js" async="async">
-											</script>
-											<div class="ya-share2" 
-											data-services="vkontakte,facebook,odnoklassniki,telegram,twitter,gplus" 
-											data-title="Для изучения тепловых процессов по физике я использую изумительно удобное боярское приложениие Cybergoose'я, а вы?" 
-											data-url="<!--ССЫЛКА-->"
-											data-image="<!--ПИКЧА-->"
-											data-counter>
-											</div>
-										</div>
-                                    </ul>
-                            </div>
-                        </div>
-                </div>  
+    <!--Header-->
+    <div class="jumbotron jumbotron-fluid bg-dark">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-sm text-light">
+                    <h3>
+                    <img src="логотип сервиса" width="45" height="45" class="d-inline-block text-center " alt="">
+                    Cybergoose inc
+                    </h3>
+                </div>
+                <ul class="nav nav-pills nav-fill">
+					<li class="nav-item">
+						<a class="nav-link " id="button8" href="http://127.0.0.1:8000/cybergoose">Главная</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="button8" href="http://127.0.0.1:8000/visual">Визуализация</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="button8" href="http://127.0.0.1:8000/aboutus">О нас</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" id="button8" href="http://127.0.0.1:8000/feedback">Отзыв</a>
+					</li>
+					<div class="w-100"></div>
+					<div class="col"></div>
+					<div class="col"></div>
+					<div class="col">
+						<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"> </script>
+						<script src="https://yastatic.net/share2/share.js" async="async"> </script>
+						<div class="ya-share2" 
+							data-services="vkontakte,facebook,odnoklassniki,telegram,twitter,gplus" 
+							data-title="Для изучения тепловых процессов по физике я использую изумительно удобное боярское приложениие Cybergoose'я, а вы?" 
+							data-url="<!--ССЫЛКА-->"
+							data-image="<!--ПИКЧА-->"
+							data-counter>
+						</div>
+					</div>
+                </ul>
+            </div>
+        </div>
+    </div>  
 
     <div class="alert alert-dark" role="alert">
        <div class="container ">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <h1>Связаться с нами</h1>
-                            <p class="lead">Вы можете оставить отзыв о нашем боярском сервисе или связаться с компанией Cybergoose:</p>
-                            <form id="contact-form" method="post" action="contact.php" role="form">
-                                <div class="messages"></div>
-                                <div class="controls">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="form_name">Ваше имя</label>
-                                                <input id="form_name" type="text" name="name" class="form-control" placeholder="Пожалуйста, введите имя" required="required" data-error="Это поле обязательно для заполнения">
-                                                <div class="help-block with-errors"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="form_email">Ваш адрес электронной почты</label>
-                                                <input id="form_email" type="email" name="email" class="form-control" placeholder="Пожалуйста, введите адрес электронной почты" required="required" data-error="VЭто поле обязательно для заполнения">
-                                                <div class="help-block with-errors"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                  
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="form_message">Отзыв</label>
-                                                <textarea id="form_message" name="message" class="form-control" placeholder="Пожалуйста, введите сообщение для Cybergoose'я" rows="4" required="required" data-error="Ваше мнения очень важно для нас"></textarea>
-                                                <div class="help-block with-errors"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <input type="submit" class="btn btn-success btn-send" value="Отправить">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <p class="text-muted"><strong>*</strong> Все поля необходимы для заполнения</p>
-                                        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h1>Связаться с нами</h1>
+                        <p class="lead">Вы можете оставить отзыв о нашем боярском сервисе или связаться с компанией Cybergoose:</p>
+                        <form id="contact-form" method="post" action="contact.php" role="form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_name">Ваше имя</label>
+                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Пожалуйста, введите имя" required="required" data-error="Это поле обязательно для заполнения">
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_email">Ваш адрес электронной почты</label>
+                                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Пожалуйста, введите адрес электронной почты" required="required" data-error="VЭто поле обязательно для заполнения">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="form_message">Отзыв</label>
+                                        <textarea id="form_message" name="message" class="form-control" placeholder="Пожалуйста, введите сообщение для Cybergoose'я" rows="4" required="required" data-error="Ваше мнения очень важно для нас"></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="text-muted"><strong>*</strong> Все поля необходимы для заполнения</p>
+                                    </div>
+                                </div>
+                                    <div class="col-md-12">
+                                    <input type="submit" class="btn btn-success btn-send" value="Отправить">
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-       </div>
+            </div>
+        </div>
     </div>
 
     <!-- Optional JavaScript -->
