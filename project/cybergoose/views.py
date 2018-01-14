@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from cybergoose.models import Substance
+from cybergoose.models import Substance, User
+from cybergoose.choices import names
 
 def about_us(request):
     return render(request, "about_us.html")
@@ -18,7 +19,7 @@ def settings(request):
 def something(request):
     return render(request, "something.html")
 def visualization(request):
-    return render(request, "visualization.html")
+    return render(request, "visualization.html", {'status_choices': names()})
 def start_page(request):
     return render(request, "Start page.html")
 
@@ -29,6 +30,13 @@ def take(name):
             return i
     return -1
 
+def secondTake(name,password):
+    for i in User.objects.values():
+        if i['name'] == name:
+            for b in User.objects.values():
+                if b['password'] == password:
+                    return 1
+                return -1
 
 
 

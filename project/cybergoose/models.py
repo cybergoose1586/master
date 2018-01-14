@@ -1,6 +1,7 @@
 from django.db import models
-
 # Create your models here.
+
+
 class Substance(models.Model):
     name = models.CharField(max_length=30)
     сSolid = models.FloatField(default=0)
@@ -9,6 +10,7 @@ class Substance(models.Model):
     TCond = models.FloatField(default=0)
     THeat = models.FloatField(default=0)
     QHeat = models.FloatField(default=0)
+    Key = models.FloatField(default=0)
 
     def __str__(self):
         return ' '.join([
@@ -51,3 +53,8 @@ class Experiments(models.Model):
 
             self.User,
         ])
+
+
+'''class Profile(models.Model):
+    user = models.OneToOneField(User)
+    Substance = models.IntegerField(choices=SUBSTANCE_CHOICES, default=1)'''
