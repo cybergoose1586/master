@@ -23,11 +23,11 @@ class Atmosphere(models.Model):
 
 class User(models.Model):
     Name = models.CharField(max_length=100)
-    Surname = models.CharField(max_length=100)
-    Mail = models.CharField(max_length=150)
-    Login = models.CharField(max_length=100)
-    Password = models.CharField(max_length=150)
-    Category = models.CharField(max_length=2)
+    Surname = models.FloatField(max_length=100, default=0)
+    Mail = models.FloatField(max_length=150, default=0)
+    Login = models.FloatField(max_length=100, default=0)
+    Password = models.FloatField(max_length=150, default=0)
+    Category = models.FloatField(max_length=2, default=8)
 
     def __str__(self):
         return ' '.join([
@@ -39,8 +39,15 @@ class User(models.Model):
 
 class Experiments(models.Model):
     ValuesSubstance = models.FloatField(default=0)
-    User = models.CharField(max_legth=100)
+    User = models.CharField(max_length=100)
     T1 = models.FloatField(default=0)
     T2 = models.FloatField(default=0)
     Nheater = models.FloatField(default=0)
     KPDheater = models.FloatField(default=0)
+
+    def __str__(self):
+        return ' '.join([
+            str(self.ValuesSubstance),
+
+            self.User,
+        ])
