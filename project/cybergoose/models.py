@@ -38,7 +38,7 @@ class User(models.Model):
 
 
 
-class Experiments(models.Model)
+class Experiments(models.Model):
     ValuesSubstance = models.FloatField(default=0)
     User = models.CharField(max_legth=100)
     T1 = models.FloatField(default=0)
