@@ -9,7 +9,7 @@
             
         <div class="ball1"></div><div class="ball2"></div><div class="ball3"></div><div class="ball4"></div><div class="ball5"></div>
 
-                    <p><div class="ball6"></div><div class="ball7"></div><div class="ball8"></div><div class="ball8"></div><div class="ball10"></div>
+                    <p><div class="ball6"></div><div class="ball7"></div><div class="ball8"></div><div class="ball9"></div><div class="ball10"></div>
                     
    
     
@@ -182,43 +182,133 @@ var loop = true;
 var easing = 'linear';
 var direction = 'alternate';
 
-anime({
-  targets: '.ball',
-  translateX: 470,
-  translateY: 100,
-  easing,
-  loop,
-  direction,
-  background: [
-    { value: '#573796' }, 
-    { value: '#FB89FB' },
-    { value: '#FBF38C' },
-    { value: '#18FF92' },
-    { value: '#5A87FF' }
-  ]
-})
+
 var ballTimeline = anime.timeline({
   loop,
   direction
 })
 ballTimeline
+ 
+
 .add({
-  targets: '.ball',
-  translateY: 100,
-  translateX: 470,
+  targets: '.ball1',
+  translateY: 70,
+  translateX: 40,
   easing
-}).add({
-  targets: '.ball',
+})
+.add({
+  targets: '.ball1',
   translateY: 0,
   translateX: 0,
   easing
-  
-}).add({
-  targets: '.ball',
-  translateY: '-80',
-  translateX: 470,
-  easing,
-  offset: 456
+})
+.add({
+  targets: '.ball2',
+  translateY: 70,
+  translateX: -20,
+  easing
+})
+.add({
+  targets: '.ball2',
+  translateY: 0,
+  translateX: 0,
+  easing
+})
+.add({
+  targets: '.ball3',
+  translateY: 70,
+  translateX: -20,
+  easing
+})
+.add({
+  targets: '.ball3',
+  translateY: 0,
+  translateX: 0,
+  easing
+})
+.add({
+  targets: '.ball4',
+  translateY: 70,
+  translateX: 20,
+  easing
+})
+.add({
+  targets: '.ball4',
+  translateY: 0,
+  translateX: 0,
+  easing
+})
+.add({
+  targets: '.ball5',
+  translateY: 70,
+  translateX: -20,
+  easing
+})
+.add({
+  targets: '.ball5',
+  translateY: 0,
+  translateX: 0,
+  easing
+})
+.add({
+  targets: '.ball6',
+  translateY: -70,
+  translateX: 20,
+  easing
+})
+.add({
+  targets: '.ball6',
+  translateY: 0,
+  translateX: 0,
+  easing
+})
+.add({
+  targets: '.ball7',
+  translateY: -70,
+  translateX: 40,
+  easing
+})
+.add({
+  targets: '.ball7',
+  translateY: 0,
+  translateX: 0,
+  easing
+})
+.add({
+  targets: '.ball8',
+  translateY: -70,
+  translateX: 0,
+  easing
+})
+.add({
+  targets: '.ball8',
+  translateY: 0,
+  translateX: 0,
+  easing
+})
+.add({
+  targets: '.ball9',
+  translateY: -70,
+  translateX: -60,
+  easing
+})
+.add({
+  targets: '.ball9',
+  translateY: 0,
+  translateX: 0,
+  easing
+})
+.add({
+  targets: '.ball10',
+  translateY: -70,
+  translateX: 0,
+  easing
+})
+.add({
+  targets: '.ball10',
+  translateY: 0,
+  translateX: 0,
+  easing
 })
 </script> 
 </body>
