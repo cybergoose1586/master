@@ -1,0 +1,314 @@
+<html>
+    <head>
+            <script src="/Users/arroiz/Desktop/anime-master/anime.min.js"></script>
+
+    </head>
+    <body>
+            <div class="container">  
+                   
+            
+        <div class="ball1"></div><div class="ball2"></div><div class="ball3"></div><div class="ball4"></div><div class="ball5"></div>
+
+                    <p><div class="ball6"></div><div class="ball7"></div><div class="ball8"></div><div class="ball9"></div><div class="ball10"></div>
+                    
+   
+    
+    </div>
+                      <style>
+                      p{  margin-top: 70px; /* Отступ сверху */
+                      margin-bottom: 1em; /* Отступ снизу */}
+                      
+                      body {
+                            background: #000000;
+                            text-align: center;
+                          }
+                          .container {
+                            width: 500px;
+                            display: inline-block;
+                            transform: translateY(300px) translateX(200px)
+                            ;
+                          }
+                          .div{     display: inline-block;}
+                          .ball1{
+                            background: #FFFFFF;
+                            width: 10px;
+                            height: 10px;
+                            background: red;
+                            -moz-border-radius: 50px;
+                            -webkit-border-radius: 50px;
+                            border-radius: 50px;
+                            position: relative;
+                            top: 45px;
+                            left: 10px;
+                            float:left; 
+        margin-left:10px; 
+        text-align:center;
+                          }
+                              .ball2 {
+                            background: #FFFFFF;
+                            width: 10px;
+                            height: 10px;
+                            background: red;
+                            -moz-border-radius: 50px;
+                            -webkit-border-radius: 50px;
+                            border-radius: 50px;
+                            position: relative;
+                            top: 45px;
+                            left: 10px;
+                            float:left; 
+        margin-left:10px; 
+        text-align:center;}
+        .ball3 {
+                            background: #FFFFFF;
+                            width: 10px;
+                            height: 10px;
+                            background: red;
+                            -moz-border-radius: 50px;
+                            -webkit-border-radius: 50px;
+                            border-radius: 50px;
+                            position: relative;
+                            top: 45px;
+                            left: 10px;
+                            float:left; 
+        margin-left:10px; 
+        text-align:center;}
+        .ball4{
+                            background: #FFFFFF;
+                            width: 10px;
+                            height: 10px;
+                            background: red;
+                            -moz-border-radius: 50px;
+                            -webkit-border-radius: 50px;
+                            border-radius: 50px;
+                            position: relative;
+                            top: 45px;
+                            left: 10px;
+                            float:left; 
+        margin-left:10px; 
+        text-align:center;
+                          }
+                          .ball5{
+                            background: #FFFFFF;
+                            width: 10px;
+                            height: 10px;
+                            background: red;
+                            -moz-border-radius: 50px;
+                            -webkit-border-radius: 50px;
+                            border-radius: 50px;
+                            position: relative;
+                            top: 45px;
+                            left: 10px;
+                            float:left; 
+        margin-left:10px; 
+        text-align:center;
+                          }
+                          .ball6{
+                            background: #FFFFFF;
+                            width: 10px;
+                            height: 10px;
+                            background: red;
+                            -moz-border-radius: 50px;
+                            -webkit-border-radius: 50px;
+                            border-radius: 50px;
+                            position: relative;
+                            top: 45px;
+                            left: 10px;
+                            float:left; 
+        margin-left:10px; 
+        text-align:center;
+                          }
+                          .ball7{
+                            background: #FFFFFF;
+                            width: 10px;
+                            height: 10px;
+                            background: red;
+                            -moz-border-radius: 50px;
+                            -webkit-border-radius: 50px;
+                            border-radius: 50px;
+                            position: relative;
+                            top: 45px;
+                            left: 10px;
+                            float:left; 
+        margin-left:10px; 
+        text-align:center;
+                          }
+                          .ball8{
+                            background: #FFFFFF;
+                            width: 10px;
+                            height: 10px;
+                            background: red;
+                            -moz-border-radius: 50px;
+                            -webkit-border-radius: 50px;
+                            border-radius: 50px;
+                            position: relative;
+                            top: 45px;
+                            left: 10px;
+                            float:left; 
+        margin-left:10px; 
+        text-align:center;
+                          }
+                          .ball9{
+                            background: #FFFFFF;
+                            width: 10px;
+                            height: 10px;
+                            background: red;
+                            -moz-border-radius: 50px;
+                            -webkit-border-radius: 50px;
+                            border-radius: 50px;
+                            position: relative;
+                            top: 45px;
+                            left: 10px;
+                            float:left; 
+        margin-left:10px; 
+        text-align:center;
+                          }
+                          .ball10{
+                            background: #FFFFFF;
+                            width: 10px;
+                            height: 10px;
+                            background: red;
+                            -moz-border-radius: 50px;
+                            -webkit-border-radius: 50px;
+                            border-radius: 50px;
+                            position: relative;
+                            top: 45px;
+                            left: 10px;
+                            float:left; 
+        margin-left:10px; 
+        text-align:center;
+                          }</style>
+   <script>
+var loop = true;
+var easing = 'linear';
+var direction = 'alternate';
+
+
+var ballTimeline = anime.timeline({
+  loop,
+  direction
+})
+ballTimeline
+.add({
+  targets: '.ball1',
+  translateY: 0,
+  translateX: 10,
+  easing
+})
+.add({
+  targets: '.ball1',
+  translateY: 0,
+  translateX: -10,
+  easing
+})
+.add({
+  targets: '.ball2',
+  translateY: 0,
+  translateX: 10,
+  easing
+})
+.add({
+  targets: '.ball2',
+  translateY: 0,
+  translateX: -10,
+  easing
+})
+.add({
+  targets: '.ball3',
+  translateY: 0,
+  translateX: 10,
+  easing
+})
+.add({
+  targets: '.ball3',
+  translateY: 0,
+  translateX: -10,
+  easing
+})
+.add({
+  targets: '.ball4',
+  translateY: 0,
+  translateX: 10,
+  easing
+})
+.add({
+  targets: '.ball4',
+  translateY: 0,
+  translateX: -10,
+  easing
+})
+.add({
+  targets: '.ball5',
+  translateY: 0,
+  translateX: 10,
+  easing
+})
+.add({
+  targets: '.ball5',
+  translateY: 0,
+  translateX: -10,
+  easing
+})
+.add({
+  targets: '.ball6',
+  translateY: 0,
+  translateX: 10,
+  easing
+})
+.add({
+  targets: '.ball6',
+  translateY: 0,
+  translateX: -10,
+  easing
+})
+.add({
+  targets: '.ball7',
+  translateY: 0,
+  translateX: 10,
+  easing
+})
+.add({
+  targets: '.ball7',
+  translateY: 0,
+  translateX: -10,
+  easing
+})
+.add({
+  targets: '.ball8',
+  translateY: 0,
+  translateX: 10,
+  easing
+})
+.add({
+  targets: '.ball8',
+  translateY: 0,
+  translateX: -10,
+  easing
+})
+.add({
+  targets: '.ball9',
+  translateY: 0,
+  translateX: 10,
+  easing
+})
+.add({
+  targets: '.ball9',
+  translateY: 0,
+  translateX: -10,
+  easing
+})
+.add({
+  targets: '.ball10',
+  translateY: 0,
+  translateX: 10,
+  easing
+})
+.add({
+  targets: '.ball10',
+  translateY: 0,
+  translateX: -10,
+  easing
+})
+
+</script> 
+</body>
+</html>    
