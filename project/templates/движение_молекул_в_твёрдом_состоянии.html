@@ -65,13 +65,9 @@ var ballTimeline = anime.timeline({
 ballTimeline
 .add({
   targets: '.ball',
-    translateX: function(el, i) {
-    return el.getAttribute('data-x');
-  },
-  translateY: function(el, i) {
-    return el.getAttribute('data-y');
-
-  },
+  translateY: 0,
+  translateX: -5,
+  
 
   offset: 10,
   easing:easing
