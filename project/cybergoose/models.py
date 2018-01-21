@@ -1,10 +1,9 @@
 from django.db import models
-# Create your models here.
 
 
 class Substance(models.Model):
     name = models.CharField(max_length=30)
-    сSolid = models.FloatField(default=0)
+    cSolid = models.FloatField(default=0)
     cLiquid = models.FloatField(default=0)
     QCond = models.FloatField(default=0)
     TCond = models.FloatField(default=0)
@@ -16,8 +15,9 @@ class Substance(models.Model):
         return ' '.join([
             self.name,
 
-            str(self.cSolid),
+            str(self.Key),
         ])
+
 
 class Atmosphere(models.Model):
     pAtm = models.FloatField(default=0)
