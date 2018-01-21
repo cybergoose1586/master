@@ -64,7 +64,7 @@ def secondTake(name,password):
 def getSubstances():
     all = []
     for i in Substance.objects.values():
-        a = {'key':i['Key'], 'name':i['name']}
+        a = {'key': i['Key'], 'name': i['name']}
         all.append(a)
     return(all)
 
