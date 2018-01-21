@@ -66,7 +66,7 @@ def getSubstances():
     for i in Substance.objects.values():
         a = {'key': i['Key'], 'name': i['name']}
         all.append(a)
-    return(all)
+    return all
 
 
 
