@@ -60,24 +60,25 @@ var ballTimeline = anime.timeline({
   loop: loop,
   direction: direction
 })
-
-for(var i = 1; i < 11; i++){
-  ballTimeline
+var i=1
+while(i<3){  ballTimeline
   .add({
     targets: '.ball',
       translateX: function(el, i) {
-  return anime.random(-100 * i, 100 * i); 
+  return anime.random(-100, 100 ); 
   
     },
     targets: '.ball',
       translateY: function(el, i) {
-      return anime.random(-100 * i, 100 * i);
+      return anime.random(-100 , 100 );
     },
 
 
     offset: 5,
     easing:easing
+
   })
+i=i+1
 }
 </script> 
 </body>

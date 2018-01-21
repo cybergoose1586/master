@@ -12,7 +12,9 @@
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-  
+  <script>
+
+    </script>
 
     <style>
 .ball {
@@ -129,7 +131,7 @@ color: black }
             </div></center>
           </div>
       <p><input id="nt"  class="form-control"  type="text" placeholder="введите начальную температуру вещества (C°)"></p>
-      <p><input id="et" class="form-control" type="text" placeholder="введите конечную температуру вещества (C°)"></p>
+      <p><input id="et" class="form-control" onclick="alert('Конечная температура не может быть выше температуры парообразования!')" type="text" placeholder="введите конечную температуру вещества (C°)"></p>
       <p><input id="tplav" class="form-control" type="text" placeholder="введите температуру плавления/кристаллизации вещества (C°)"></p>
       <p><input id="tparoobraz" class="form-control" type="text" placeholder="введите температуру парообразования вещества (C°)"></p>
       <p><input id="l" class="form-control" type="text" placeholder="введите удельную теплоту парообразования (Дж/кг)"></p>
@@ -304,11 +306,17 @@ myLineChart.data.datasets[0].data.push({
 x: String(x4),
 y: String(y4),
 });
+
 myLineChart.data.datasets[0].data.push({
 x: String(x5),
 y: String(y5),
 });
 }
+if (et>=tplav){myLineChart.data.datasets[0].data.push({
+x: String(x6),
+y: String(et),
+});}
+else{
 myLineChart.data.datasets[0].data.push({
 x: String(x6),
 y: String(y6),
@@ -321,7 +329,7 @@ myLineChart.data.datasets[0].data.push({
 x: String(x8),
 y: String(y8),
 });
-
+}
 myLineChart.data.labels.push(document.getElementById('nt').value);
 myLineChart.update();
 }
