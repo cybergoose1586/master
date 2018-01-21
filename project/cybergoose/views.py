@@ -38,7 +38,7 @@ def something(request):
 
 
 def visualization(request):
-    return render(request, "visualization.html", {'status_choices': getSubstances()})
+    return render(request, "visualization.html", {'status_choices': get_substances_as_options()})
 
 
 def start_page(request):
@@ -52,7 +52,7 @@ def take(name):
     return -1
 
 
-def secondTake(name,password):
+def secondTake(name, password):
     for i in User.objects.values():
         if i['name'] == name:
             for b in User.objects.values():
@@ -61,12 +61,9 @@ def secondTake(name,password):
         return -1
 
 
-def getSubstances():
-    all = []
-    for i in Substance.objects.values():
-        a = {'key': i['Key'], 'name': i['name']}
-        all.append(a)
-    return all
+def get_substances_as_options():
+    options = [
+        (obj['Key'], obj['name']) for obj in Substance.objects.values()
+    ]
 
-
-
+    return options
