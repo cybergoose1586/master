@@ -6,12 +6,12 @@
     <title>О нас</title>
 
     <style>
-        body { min-width: 100px;
+       body { min-width: 100px;
 			background: url(https://images7.alphacoders.com/546/546508.jpg) no-repeat;
 			 -moz-background-size: 102%;
 			 -webkit-background-size: 102%; 
 			 -o-background-size: 102%;
-			 background-size: 102%;
+			 background-size: cover%;
 			background-attachment: fixed, fixed;}
 
 		#button8{text-align: right;}
@@ -19,7 +19,18 @@
 			color: black; }
 		#button8:active { background: white;
 			color: black; }
-       </style>
+
+            canvas {
+    border: 1px dashed black;}
+	   </style>
+	   
+	   <script>
+		window.onload = function() {
+			var canvas = document.getElementById("s");
+			var context = canvas.getContext("2d");   
+		}
+		
+		</script>
 
 
     <!-- Required meta tags -->
@@ -83,40 +94,17 @@
 						</ul>
 				</div>
 			</div>
-	</div>  
-  
-  
-    <center><div class="alert alert-dark" role="alert" id="auth">
-              <div class="container">
-                  <h3> <class="d-inline-block text-center" alt=""> Авторизация</h3>
-                  <p class="lead"> Для полноценного использования нашего боярского приложения, пожалуйста, войдите:</p>
-      <div class="col-lg-8 col-lg-offset-2">
-            <form>
-              <div class="form-group">
-                <label for="exampleInputEmail1"> </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите почту">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1"></label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите пароль">
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input">
-                  Запомнить
-                </label>
-                <small id="emailHelp" class="form-text text-muted">Все данные конфиденциальны</small>
-              </div>
-              <button type="submit" class="btn btn-success">Войти</button>
-              <button type="submit" class="btn btn-success">Зарегистрироваться</button>
-            </form>
-              </div>
-    </div></center>
-        
-            <!-- Optional JavaScript -->
-            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-          </body>
-        </html>
+	</div> 
+
+	<div class="alert alert-dark" role="alert">
+	<canvas id="s" width="300" height="225"></canvas>
+	</div>
+	
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
