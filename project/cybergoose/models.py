@@ -40,7 +40,7 @@ class User(models.Model):
 
 class Experiments(models.Model):
     ValuesSubstance = models.FloatField(default=0)
-    User = models.CharField(max_legth=100)
+    User = models.CharField(max_length=100)
     T1 = models.FloatField(default=0)
     T2 = models.FloatField(default=0)
     Nheater = models.FloatField(default=0)
