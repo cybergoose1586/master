@@ -118,7 +118,7 @@ function pob(){
         y: String(y1), 
         }); 
         myLineChart.data.datasets[0].data.push({ 
-        x: String(x6), 
+        x: String((x6*nt)/et), 
         y: String(y8), 
         }); 
       } 
