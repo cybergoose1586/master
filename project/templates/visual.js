@@ -112,24 +112,24 @@ function pob(){
         y: String(y8), 
         }); 
       } 
-      else { 
+      else if (et>tplav){ 
         myLineChart.data.datasets[0].data.push({ 
         x: String(x1), 
         y: String(y1), 
         }); 
         myLineChart.data.datasets[0].data.push({ 
-        x: String((x6*nt)/et), 
+        x: String((x6/et)*nt), 
         y: String(y8), 
         }); 
       } 
-      if (et=tplav){ 
+      else  { 
         myLineChart.data.datasets[0].data.push({ 
         x: String(x1), 
         y: String(y1), 
         }); 
         myLineChart.data.datasets[0].data.push({ 
         x: String(x6), 
-        y: String(y6), 
+        y: String(et), 
         }); 
       } 
       
