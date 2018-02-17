@@ -81,7 +81,7 @@ function pob(){
   var y1 = nt; 
   var x2 = ((Ctverdoe*m*(tplav-nt))/(kpd+pn)); 
   var y2 = tplav; 
-  var x3 = (lambda*m)/(kpd*pn)+x2; 
+  var x3 = (lambda*m)/(kpd*pn); 
   var y3 = y2; 
   var x4 = ((Czhidkoe*m*(tparoobraz-tplav))/(kpd+pn)) + x3; 
   var y4 = tparoobraz; 
@@ -133,6 +133,26 @@ function pob(){
         }); 
       } 
       
+      }
+      else if(nt<tplav){
+        myLineChart.data.datasets[0].data.push({ 
+          x: String(x1), 
+          y: String(y1), 
+          }); 
+          myLineChart.data.datasets[0].data.push({ 
+            x: String(x8), 
+            y: String(y8), 
+            }); 
+      }
+      else{
+        myLineChart.data.datasets[0].data.push({ 
+          x: String(x1), 
+          y: String(y1), 
+          }); 
+          myLineChart.data.datasets[0].data.push({ 
+            x: String(x3), 
+            y: String(y8), 
+            }); 
       }
       myLineChart.data.labels.push(document.getElementById('nt').value); 
       myLineChart.update(); 
