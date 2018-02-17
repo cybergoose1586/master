@@ -1,0 +1,76 @@
+<html> 
+<head> 
+<style> 
+canvas { background: rgb(87, 79, 79); } 
+body{background: black}
+</style> 
+</head> 
+<body> 
+<canvas id="myCanvas" width="480" height="420"></canvas>
+<script> 
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+var ballRadius = 10;
+var x = canvas.width/2;
+var y = canvas.height-30;
+var dx = 2;
+var dy = -2;
+
+function drawBall() {
+    ctx.beginPath();
+    ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+    ctx.fillStyle = "#0095DD";
+    ctx.fill();
+    ctx.closePath();
+    
+        ctx.beginPath();
+        ctx.moveTo(50,350);
+        ctx.lineTo(135,150);
+        ctx.stroke();
+
+        ctx.moveTo(135,150);
+        ctx.lineTo(135,90);
+        ctx.stroke();
+
+        ctx.lineTo(135,90);
+        ctx.lineTo(180,90);
+        ctx.stroke();
+
+        ctx.lineTo(180,90);
+        ctx.lineTo(180,150);
+        ctx.stroke();
+        
+        ctx.lineTo(180,150);
+        ctx.lineTo(135,150);
+        ctx.stroke();
+
+        ctx.lineTo(180,150);
+        ctx.lineTo(265,350);
+        ctx.stroke();
+        
+        ctx.lineTo(265,350);
+        ctx.lineTo(50,350);
+        ctx.stroke();
+    
+}
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawBall();
+    
+    if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+        dx = -dx;
+    }
+    if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
+        dy = -dy;
+    }
+    
+    x += dx;
+    y += dy;
+}
+
+setInterval(draw, 0);
+
+</script> 
+</body> 
+</html>
