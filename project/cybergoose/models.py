@@ -65,6 +65,26 @@ class Post(models.Model):
         return self.title
 
 
+class Comments(models.Model):
+    class Meta():
+        db_table = 'comments'
+
+
+    comments_text = models.TextField()
+    comments_text = models.ForeignKey(article)
+
+class Article(models.Model):
+    class Meta():
+        db_table = 'article'
+
+    article_title = models.CharField(max_length = 200)
+    article_text = models.TextField()
+    article_date = models.DateTimeField()
+
+
+
+
+
 
 
 

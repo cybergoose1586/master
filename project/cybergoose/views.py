@@ -22,6 +22,14 @@ def visualization(request):
 def start_page(request):
     return render(request, "Start page.html")
 
+def feedbacks(request, article_id = 1):
+    comment_form = Comment_form
+    args = {}
+    args.update(csrf(request))
+    args['article'] = Article.objects.get(id = article_id)
+    args['comments'] = Comments.objects.filter(comments_article_id = article_id)
+    args['form'] = comment_form
+    return render_to_response('feedback.html', args)
 # 2
 def take(name):
     for i in Substance.objects.values():
