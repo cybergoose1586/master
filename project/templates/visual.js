@@ -89,7 +89,7 @@ function pp(){
     var y5 = y4; 
     
     if(nt<tplav){
-      if (tparoobraz>=et>tplav){
+      if (et>tplav){
         myLineChart.data.datasets[0].data.push({ 
           x: String(x1), 
           y: String(y1), 
@@ -112,7 +112,7 @@ function pp(){
   
       }  
 
-       else if (tplav>=et){
+       else if (tplav=>et){
           myLineChart.data.datasets[0].data.push({ 
             x: String(x1), 
             y: String(y1), 
@@ -120,12 +120,30 @@ function pp(){
 
             myLineChart.data.datasets[0].data.push({ 
               x: String(x2), 
-              y: String(y8), 
+              y: String(et), 
               }); 
         }
-        
-        
+      }
+    else if (nt=>tplav){
+      if(et=tplav){
+        myLineChart.data.datasets[0].data.push({ 
+        x: String(x1), 
+         y: String(tplav), 
+        }); 
+      }
+      else if(et>tplav){
+        myLineChart.data.datasets[0].data.push({ 
+        x: String(x1), 
+        y: String(tplav), 
+        });
+        myLineChart.data.datasets[0].data.push({ 
+        x: String(x4), 
+        y: String(et), 
+        });
+      }
     }
+        
+    
   myLineChart.data.labels.push(document.getElementById('nt').value); 
   myLineChart.update(); 
   
@@ -345,7 +363,6 @@ function adddata() {
   myLineChart.data.labels.push(document.getElementById('nt').value); 
   myLineChart.update(); 
 } 
-
 var option = { 
 showLines: true 
 }; 
