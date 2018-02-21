@@ -128,10 +128,10 @@ function pp(){
       if(et=tplav){
         myLineChart.data.datasets[0].data.push({ 
         x: String(x1), 
-         y: String(tplav), 
+        y: String(tplav), 
         }); 
       }
-      else if(et>tplav){
+      else {
         myLineChart.data.datasets[0].data.push({ 
         x: String(x1), 
         y: String(tplav), 
