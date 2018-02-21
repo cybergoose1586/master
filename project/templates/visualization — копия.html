@@ -1,0 +1,234 @@
+﻿<!doctype html>
+<html lang="ru">
+  <head>
+    <title>Visualization</title>
+    <style>
+      .ball {
+        background: #FFFFFF;
+        width: 10px;
+        height: 10px;
+        position: relative;
+        top: 45px;
+        left: 10px;
+      }
+      
+      #ff {width: 100px}
+
+      body {min-width: 100px;}
+
+      body {
+        min-width: 100px;
+        background: url(https://images7.alphacoders.com/546/546508.jpg) no-repeat;
+			  -moz-background-size: 102%;
+			  -webkit-background-size: 102%; 
+			  -o-background-size: 102%;
+			  background-size: 102%;
+        background-attachment: fixed, fixed;}
+
+      body {min-width: 100px;}
+
+      #griphicandmenu {width: 100%}
+
+      #cv {
+        width: 100px;
+        background: white;
+        color: black;
+        box-shadow: black;
+        -webkit-box-shadow: 0 1px 4px rgb(0, 0, 0);
+        }
+
+      .addp {
+        background: rgba(26, 184, 26, 0.89);
+        color: white;
+          width: 100px;
+          height: 35px;
+      }
+
+      .graph {
+        color: black;
+        background: white;
+      }
+
+      #button8 {text-align: right;}
+      #button8:hover {
+        background: rgb(255, 255, 255);
+        color: black 
+        }
+      #button8:active { 
+        background: white;
+        color: black 
+      }
+
+      #subschange {
+        margin: 2%
+      }
+    </style>
+
+    <!--<canvas id="myChart"></canvas>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+   
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+   
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+
+  </head>
+
+  <body>
+    <!--Header-->
+    <div class="jumbotron jumbotron-fluid bg-dark" >
+      <div class="container ">
+        <div class="row id">
+          <div class="col-sm text-light">
+            <h3>
+            <img src="логотип сервиса" width="45" height="45" class="d-inline-block text-center " alt="">
+            Cybergoose inc
+            </h3>
+          </div>
+          <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+              <a class="nav-link active" id="button8" href="http://127.0.0.1:8000/cybergoose">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="button8" href="http://127.0.0.1:8000/visual">Визуализация</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="button8" href="http://127.0.0.1:8000/aboutus">О нас</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="button8" href="http://127.0.0.1:8000/feedback">Отзыв</a>
+            </li>
+            <div class="w-100"></div>
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+              <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js">
+              </script>
+              <script src="https://yastatic.net/share2/share.js" async="async">
+              </script>
+              <div class="ya-share2" 
+              data-services="vkontakte,facebook,odnoklassniki,telegram,twitter,gplus" 
+              data-title="Для изучения тепловых процессов по физике я использую удобный сайт Cybergoose'я, а вы?" 
+              data-url="<!--ССЫЛКА-->"
+              data-image="<!--ПИКЧА-->"
+              data-counter>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>  
+    
+    <div class="alert alert-dark" role="alert">
+
+      <div class="container-fluid" id="griphicandmenu">
+          <h1 align="center">Меню</h1>
+          <p align="center">Выберите вещество или установите параметры самостоятельно:</p>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-6">
+                      <div class="row" id="subschange">
+                          <div class=col-fluid > Выберите вещество: </div>
+                          <div class=col> 
+                              <div class="dropdown" align="left">
+                                  <button class="btn btn-secondary dropdown-toggle" id="cv" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> вещества </button>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">спирт</a>
+                                    <a class="dropdown-item" href="#">вода</a>
+                                    <a class="dropdown-item" href="#">ртуть</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-addon">/</span>
+                        <input id="m" class="form-control" type="text" placeholder="введите массу в-ва (кг)">
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-addon">/</span>
+                        <input id="nt" class="form-control"  type="text" placeholder="введите начальную температуру в-ва (C°)">
+                      </div>
+                      <div class="input-group">
+                          <span class="input-group-addon">/</span>
+                          <input id="et" class="form-control" onclick="alert('Конечная температура не может быть выше температуры парообразования!')" type="text" placeholder="введите конечную температуру в-ва (C°)">
+                        </div>
+                        <div class="input-group">
+                          <span class="input-group-addon">/</span>
+                          <input id="tplav" class="form-control" type="text" placeholder="введите температуру плавления или кристаллизации в-ва (C°)">
+                        </div>
+                        <div class="input-group">
+                          <span class="input-group-addon">/</span>
+                          <input id="tparoobraz" class="form-control" type="text" placeholder="введите температуру парообразования в-ва (C°)">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="input-group">
+                        <span class="input-group-addon">/</span>
+                        <input id="kpd" class="form-control" type="text" placeholder="введите КПД (%)">
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-addon">/</span>
+                        <input id="pn" class="form-control" type="text" placeholder="введите мощность нагревателя (Вт)">
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-addon">/</span>
+                        <input id="Czhidkoe" class="form-control" type="text" placeholder="введите теплоёмкость в-ва в жидком состоянии (Дж/(кг・C°))">
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-addon">/</span>
+                        <input id="Ctverdoe" class="form-control" type="text" placeholder="введите теплоёмкость в-ва в твёрдом состоянии (Дж/(кг・C°))">
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-addon">/</span>
+                        <input id="l" class="form-control" type="text" placeholder="введите удельную теплоту парообразования в-ва (Дж/кг)">
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-addon">/</span>
+                        <input id="lambda" class="form-control" type="text" placeholder="введите удельную теплоту плавления в-ва (Дж/кг)">
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                   <div class=container>
+                      <center> 
+                        <button type="button" value="Add Data" onclick="adddata()" class="addp">применить</button>
+                        <button onclick="pob()" class="graph">температура понижается</button>
+                        <button type="button" value="remove Data" onclick="cr()" class="addp">очистить</button>
+                      </center>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+      <div class="container" id="griphicandmenu">
+        <div class="row">
+          <div class="col-sm" >
+            <h1>
+              <center>График (где x это время, а y температура)</center>
+            </h1>
+            <div class="container-fluid ">
+              <div style="width:85%;">
+                <canvas id="myChart" width="120" height="100"></canvas>
+                <script src="visual.js"> </script>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+  
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> 
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  </body>
+</html>
