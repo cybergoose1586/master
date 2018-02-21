@@ -237,7 +237,7 @@ function pob(){
             }); 
       }
       else{
-        myLineChart.data.datasets[0].data.push({ 
+        if (et<tplav){myLineChart.data.datasets[0].data.push({ 
           x: String(x1), 
           y: String(y1), 
           }); 
@@ -246,6 +246,13 @@ function pob(){
             y: String(y8), 
             }); 
       }
+      else if (et==tplav){
+        myLineChart.data.datasets[0].data.push({ 
+          x: String(x1), 
+          y: String(y1), 
+          }); 
+      }
+    }
       myLineChart.data.labels.push(document.getElementById('nt').value); 
       myLineChart.update(); 
     
