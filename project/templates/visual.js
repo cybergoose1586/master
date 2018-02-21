@@ -62,6 +62,75 @@ for (var i=0;i<8;i=i+1)
 myLineChart.data.datasets[0].pop(); 
 } 
 
+//график вверх
+function pp(){
+    var nt = Number(document.getElementById('nt').value);//начальная температура 
+    var x = 0 ; 
+    var y = 0 ; 
+    var et = Number(document.getElementById('et').value) ; //конечная температура 
+    var tplav =Number(document.getElementById('tplav').value) ;//температура плавления 
+    var m = Number(document.getElementById('m').value) ;//масса 
+    var kpd = Number(document.getElementById('kpd').value) ;//кпд 
+    var pn = Number(document.getElementById('pn').value) ;//мощность нагревателя 
+    var l = Number(document.getElementById('l').value) ;//удельная теплота парообразования 
+    var lambda = Number(document.getElementById('lambda').value) ;//удельная теплота плавления 
+    var tparoobraz = Number(document.getElementById('tparoobraz').value);//температура парообразования 
+    var Ctverdoe = Number(document.getElementById('Ctverdoe').value);//теплоёмкость в твёрдом 
+    var Czhidkoe = Number(document.getElementById('Czhidkoe').value);//теплоёмкость в жидком 
+    var x1 = 0; 
+    var y1 = nt; 
+    var x2 = ((Ctverdoe*m*(tplav-nt))/(kpd+pn)); 
+    var y2 = tplav; 
+    var x3 = (lambda*m)/(kpd*pn)+x2; 
+    var y3 = y2; 
+    var x4 = ((Czhidkoe*m*(tparoobraz-tplav))/(kpd+pn)) + x3; 
+    var y4 = tparoobraz; 
+    var x5 = (l*m)/(kpd*pn)+x4; 
+    var y5 = y4; 
+    
+    if(nt<tplav){
+      if (tparoobraz>=et>tplav){
+        myLineChart.data.datasets[0].data.push({ 
+          x: String(x1), 
+          y: String(y1), 
+          }); 
+
+          myLineChart.data.datasets[0].data.push({ 
+            x: String(x2), 
+            y: String(y2), 
+            }); 
+            
+            myLineChart.data.datasets[0].data.push({ 
+              x: String(x3), 
+              y: String(y3), 
+              }); 
+
+              myLineChart.data.datasets[0].data.push({ 
+                x: String(x4), 
+                y: String(et), 
+                }); 
+  
+      }  
+
+       else if (tplav>=et){
+          myLineChart.data.datasets[0].data.push({ 
+            x: String(x1), 
+            y: String(y1), 
+            }); 
+
+            myLineChart.data.datasets[0].data.push({ 
+              x: String(x2), 
+              y: String(y8), 
+              }); 
+        }
+        
+        
+    }
+  myLineChart.data.labels.push(document.getElementById('nt').value); 
+  myLineChart.update(); 
+  
+}
+
 //график вниз 
 function pob(){ 
   var nt = Number(document.getElementById('nt').value);//начальная температура 
