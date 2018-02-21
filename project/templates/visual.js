@@ -112,7 +112,7 @@ function pp(){
   
       }  
 
-       else if (tplav=>et){
+       else if (et <= tplav){
           myLineChart.data.datasets[0].data.push({ 
             x: String(x1), 
             y: String(y1), 
@@ -124,24 +124,29 @@ function pp(){
               }); 
         }
       }
-    else if (nt=>tplav){
-      if(et=tplav){
+    else if (nt >= tplav){
+      
+       if(et == tplav && nt == tplav){
         myLineChart.data.datasets[0].data.push({ 
         x: String(x1), 
-        y: String(tplav), 
+        y: String(y1), 
         }); 
       }
-      else {
-        myLineChart.data.datasets[0].data.push({ 
-        x: String(x1), 
-        y: String(tplav), 
-        });
-        myLineChart.data.datasets[0].data.push({ 
-        x: String(x4), 
-        y: String(et), 
-        });
-      }
+
+      else if(et > tplav){
+          myLineChart.data.datasets[0].data.push({ 
+          x: String(x1), 
+          y: String(y1), 
+          });
+
+          myLineChart.data.datasets[0].data.push({ 
+          x: String(x4), 
+          y: String(et), 
+          });
+        }
+
     }
+   
         
     
   myLineChart.data.labels.push(document.getElementById('nt').value); 
