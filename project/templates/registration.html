@@ -1,22 +1,38 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
+
     <title>Регистрация</title>
+
+    <style>
+        
+        body { min-width: 100px;
+          background: url(https://images7.alphacoders.com/546/546508.jpg) no-repeat;
+         -moz-background-size: 100%;
+         -webkit-background-size: 100%; 
+         -o-background-size: 100%;
+         background-size: 100%;
+        background-attachment: fixed, fixed;}
+
+        #button8{text-align: right;}
+        #button8:hover { background: rgb(255, 255, 255);
+        color: black; }
+      #button8:active { background: white;
+      color: black; }
+
+       </style>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Боярский сервис с анимированными тепловыми процессами по физике для 8-10 классов"> 
-    <meta name="Keywords" content="кипение, испарение, кристаллизация веществ, тепловые опыты, тепловые процессы, термодинамика, физика, химия, 8 класс, 9 класс, 10 класс">
-    
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <!--<canvas id="myChart"></canvas>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
-    <link href="style.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='custom.css' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
@@ -61,8 +77,7 @@
                   </ul>
               </div>
           </div>
-      </div>  
-
+      </div>    
     <div class="alert alert-dark" role="alert">
         <div class="container">
             <div class="container">
@@ -72,53 +87,54 @@
                       <p class="lead"> Для полноценного использования нашего боярского приложения, пожалуйста, зарегистрируйтесь:</p>
                       <p><small class=" text-muted"> Все поля необходимы для заполнения </small></p>
                       <form>
-                              <div class="row">
-                                  <div class="col-md-6">
-                                  <div class="form-group">
-                                    <label for="exampleInputEmail1"> Ваш логин </label>
-                                    <input type="login" class="form-control" id="exampleInputLogin" aria-describedby="LoginHelp" placeholder="Введите логин">
-                                  </div>
-                                  </div>
-                                  <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="form_name"> Ваше имя </label>
-                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Введите полное имя" required="required" data-error="Это поле обязательно для заполнения">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                </div>
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label for="exampleInputEmail1"> Ваш логин </label>
+                                      <input type="login" class="form-control" id="exampleInputLogin" aria-describedby="LoginHelp" placeholder="Введите логин">
+                                    </div>
+                                    </div>
+                                    <div class="col-md-6">
                                       <div class="form-group">
-                                        <label for="exampleInputEmail1"> Ваш адрес электронной почты </label>
-                                        <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="EmailHelp" placeholder="Введите почту">
-                                      </div> </div>
+                                          <label for="form_name"> Ваше имя </label>
+                                          <input id="form_name" type="text" name="name" class="form-control" placeholder="Введите полное имя" required="required" data-error="Это поле обязательно для заполнения">
+                                          <div class="help-block with-errors"></div>
+                                      </div>
+                                  </div>
+                                  </div>
+                                  <div class="row">
                                       <div class="col">
-                                      <div class="form-group">
-                                        <label for="exampleInputPassword1"> Ваш пароль </label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите пароль">
-                                      </div> </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <div class="form-check">
-                                                <label class="form-check-label">
-                                                  <input type="checkbox" class="form-check-input">
-                                                  ...Запомнить
-                                                </label>
-                                                  <small class="form-text text-muted"> Все данные конфиденциальны </small>
-                                              </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                    <div class="col-md">
-                                          <input type="submit" class="btn btn-success btn-send" value="Отправить"> 
-                                    </div> 
-                                  </div> 
-                                </form> 
+                                        <div class="form-group">
+                                          <label for="exampleInputEmail1"> Ваш адрес электронной почты </label>
+                                          <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="EmailHelp" placeholder="Введите почту">
+                                        </div> </div>
+                                        <div class="col">
+                                        <div class="form-group">
+                                          <label for="exampleInputPassword1"> Ваш пароль </label>
+                                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите пароль">
+                                        </div> </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-md">
+                                              <div class="form-check">
+                                                  <label class="form-check-label">
+                                                    <input type="checkbox" class="form-check-input">
+                                                    ...Запомнить
+                                                  </label>
+                                                    <small class="form-text text-muted"> Все данные конфиденциальны </small>
+                                                </div>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                      <div class="col-md">
+                                        <label class = "error">{{ login_error}}</lable>
+                                        <input type="submit" class="btn btn-success btn-send" value="Отправить"> 
+                                      </div> 
+                                      </div> 
+                        </form>
                               </div> 
                             </div> 
-                          </div> 
+                          </div> d
                         </div> 
                       </div>
                       

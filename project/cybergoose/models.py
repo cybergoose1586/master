@@ -65,15 +65,15 @@ class Post(models.Model):
         return self.title
 
 
-class Comments(models.Model):
-    class Meta():
-        db_table = 'comments'
+#class Comments(models.Model):
+#    class Meta():
+#        db_table = 'comments'
 
 
-    comments_text = models.TextField()
-    comments_text = models.ForeignKey(article)
+ #   comments_text = models.TextField()
+#    comments_text = models.ForeignKey(article)
 
-class Article(models.Model):
+#class Article(models.Model):
     class Meta():
         db_table = 'article'
 
