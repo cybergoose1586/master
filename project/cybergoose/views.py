@@ -1,5 +1,9 @@
+from django.shortcuts import render_to_response,redirect
 from django.shortcuts import render
 from cybergoose.models import Substance
+from django.contrib import auth
+from django.contrib.auth.forms import UserCreationForm
+from django.template.context_processors import csrf
 
 def about_us(request):
     return render(request, "about_us.html")
@@ -36,6 +40,49 @@ def take(name):
         if i['name'] == name:
             return i
     return -1
+
+
+def login(request):
+    args = {}
+    args.update(csrf(request))
+    if request.POST:
+        email = request.POST.get('email', '')
+        password = request.POST.get('password', '')
+        user = auth.authenticate(email = email, password = password)
+        if user is not None:
+            auth.login(request, user)
+            return redirect('/')
+        else:
+            args['login_error'] = "Пользователь не найден"
+            return render_to_response('enter.html', args)
+    else:
+        return render_to_response('enter.html', args)
+
+
+def logout(request):
+    auth.logout(request)
+    return redirect("/")
+
+
+
+def register(request):
+    args = {}
+    args.update(csrf(request))
+    args['form'] = UserCreationForm()
+    if request.POST:
+        newuser_form = UserCreationForm(request.POST)
+        if newuser_form.is_valid():
+            newuser_form.save()
+            newuser = auth.authenticate(username = newuser_form.cleaned_data['username'], password = newuser_form.cleaned_data[password2])
+            auth.login(request, newuser)
+            return redirect('/')
+        else:
+            args['form'] = newuser_form
+    return render_to_response('registration.html', args)
+
+
+
+
 
 
 

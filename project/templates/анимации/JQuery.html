@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+  #abcd{float: left}
+  #abcde{float: left;}
+.circle {
+	width: 20px;
+	height: 20px;
+	background: red;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+#block1 {display: inline-block}
+#block2 {display: inline-block}
+#block3 {display: inline-block}
+#block4 {display: inline-block}
+#block5 {display: inline-block}
+#block6 {display: inline-block}
+#block7 {display: inline-block}
+#block8 {display: inline-block}
+#block9 {display: inline-block}
+#block10 {display: inline-block}
+</style>
+</head>
+<body>
+    <button id="go">» Съешь пирожок</button>
+
+    <p><div id="abcd">
+      <p><div id="block1" class="circle"></div>
+    <div id="block2" class="circle"></div>
+    <div id="block3" class="circle"></div>
+    <div id="block4" class="circle"></div>
+    <div id="block5" class="circle"></div>
+  </div></p>
+
+    <p><div id="abcde">
+      <p><div id="block6" class="circle"></div>
+    <div id="block7" class="circle"></div>
+    <div id="block8" class="circle"></div>
+    <div id="block9" class="circle"></div>
+    <div id="block10" class="circle"></div></p>
+  </div></p>
+    <script>
+      // Произведем изменение нескольких css-величин в ходе одной анимации.
+      $("#go").click(function(){
+        $("#block").animate({ 
+         
+          marginLeft: "10px",  // отступ от левого края элемента станет равным 6 дюймам
+          fontSize: "3em",      // размер шрифта увеличится в 3 раза
+          borderWidth: "10px" ,
+          marginTop:"30px",
+           // толщина рамки станет 10 пикселей
+        }, 1500);               // анимация будет происходить 1,5 секунды
+      {
+        $("#block1").animate({ 
+     
+          marginLeft: "20px",  // отступ от левого края элемента станет равным 6 дюймам
+          fontSize: "3em",      // размер шрифта увеличится в 3 раза
+          borderWidth: "10px" ,
+          marginTop:"30px",
+           // толщина рамки станет 10 пикселей
+        }, 1500);  
+      }
+      }
+      );
+      </script>
+</body>
+</html>
+
