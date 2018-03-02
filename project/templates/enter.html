@@ -2,13 +2,14 @@
 
 
 <html lang="en">
-
     <head>
-  
+    
+
       <title>Вход</title>
   
       <style>
         #auth{width: 80%;}
+        
   
         body { min-width: 100px;
           background: url(https://images7.alphacoders.com/546/546508.jpg) no-repeat;
@@ -91,10 +92,10 @@
                       <class="d-inline-block text-center" alt="">
                       Авторизация
                   </h3>
-      {% block login %}
+            
         <div class="col-lg-8 col-lg-offset-2">
-            <form action="/reg" method="post">
-              {% csrf_token %}
+            <form>
+              
                 <div class="form-group">
                   <label for="exampleInputEmail1"> </label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите почту">
@@ -110,21 +111,25 @@
                   </label>
                   <small id="emailHelp" class="form-text text-muted">Все данные конфиденциальны</small>
                 </div>
-                {%if login_error%}
-                  <label class = "error">{{ login_error }}</label>
-                {%endif%}
-                  <button type="submit" class="btn btn-success">Войти</button>
+                <div>
+                    <button type="submit" class="btn btn-success">Войти</button>
+                </div>
               
             </form>
+            
+            
+              <div>
+      <a class="btn btn-success" id="button8" href="reg">Зарегистрироваться</a>
               </div>
-      {% endblock %}
-      <a class="btn btn-success" id="button8" href="/reg">Зарегистрироваться</a>
-    </div></center>
+    </center>
         
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+          
           </body>
+          
+
         </html>
