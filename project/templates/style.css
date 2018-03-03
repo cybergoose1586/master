@@ -15,7 +15,7 @@ body {
         -o-background-size: cover;
         background-size: cover;
   background-attachment: fixed;}
-#griphicandmenu {width: 100%}
+.griphicandmenu {width: 100%}
 #auth{width: 80%;}
 
 #mg {margin: 2%}
@@ -30,14 +30,14 @@ body {
   background: rgba(24, 153, 24, 0.89);
   color: white;
 }
-#button8 {
+.button8 {
   text-align: right;
   }
-#button8:hover{
+.button8:hover{
   background: rgb(10, 99, 207);
   color: white 
   }
-#button8:active{ 
+.button8:active{ 
   background: white;
   color: black 
 }
