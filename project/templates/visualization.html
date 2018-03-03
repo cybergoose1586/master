@@ -88,49 +88,60 @@
               <div class="col-6">
                   <div class="input-group">
                     <span class="input-group-addon">t<sub>нач&#8195;</sub>=</span>
-                    <input id="nt" class="form-control"  type="text" placeholder="введите начальную температуру в-ва (C°)">
+                    <input id="nt" class="form-control"  type="text" placeholder="введите начальную температуру в-ва">
+                    <span class="input-group-addon"> C°</span>
                   </div>
                   <div class="input-group">
                       <span class="input-group-addon">t<sub>кон&#8195;</sub>=</span>
-                      <input id="et" class="form-control" onclick="alert('Конечная температура не может быть выше температуры парообразования!')" type="text" placeholder="введите конечную температуру в-ва (C°)">
-                  </div>
+                      <input id="et" class="form-control" onclick="alert('Конечная температура не может быть выше температуры парообразования')" type="text" placeholder="введите конечную температуру в-ва">
+                      <span class="input-group-addon"> C°</span>
+                    </div>
                   <div class="input-group">
                     <span class="input-group-addon">t<sub>плав</sub> =</span>
-                    <input id="tplav" class="form-control" type="text" placeholder="введите температуру плавления или кристаллизации в-ва (C°)">
+                    <input id="tplav" class="form-control" type="text" placeholder="введите температуру плавления или кристаллизации в-ва">
+                    <span class="input-group-addon"> C°</span>
                   </div>
                   <div class="input-group">
                     <span class="input-group-addon">t<sub>пар&#8195;</sub>=</span>
-                    <input id="tparoobraz" class="form-control" type="text" placeholder="введите температуру парообразования в-ва (C°)">
+                    <input id="tparoobraz" class="form-control" type="text" placeholder="введите температуру парообразования в-ва">
+                    <span class="input-group-addon"> C°</span>
                   </div>
                   <div class="input-group">
                     <span class="input-group-addon">&#8195;η&#8195;=</span>
-                    <input id="kpd" class="form-control" type="text" placeholder="введите КПД (%)">
+                    <input id="kpd" class="form-control" type="text" placeholder="введите КПД">
+                    <span class="input-group-addon">&#160;%</span>
                   </div>
                   <div class="input-group">
                     <span class="input-group-addon">&#8195;N&#8194; =</span>
-                    <input id="pn" class="form-control" type="text" placeholder="введите мощность нагревателя (Вт)">
+                    <input id="pn" class="form-control" type="text" placeholder="введите мощность нагревателя">
+                    <span class="input-group-addon"> Вт </span>
                   </div>
               </div>
               <div class="col-6">
                 <div class="input-group">
                   <span class="input-group-addon">m&#160;&#160;=</span>
-                  <input id="m" class="form-control" type="text" placeholder="введите массу в-ва (кг)">
+                  <input id="m" class="form-control" type="text" placeholder="введите массу в-ва">
+                  <span class="input-group-addon">&#8195;кг&#8195;</span>
                 </div>
                 <div class="input-group">
                   <span class="input-group-addon">С<sub>ж</sub>=</span>
-                  <input id="Czhidkoe" class="form-control" type="text" placeholder="введите теплоёмкость в-ва в жидком состоянии (Дж/(кг・C°))">
+                  <input id="Czhidkoe" class="form-control" type="text" placeholder="введите теплоёмкость в-ва в жидком состоянии">
+                  <span class="input-group-addon">  Дж/(кг・C°) </span>
                 </div>
                 <div class="input-group">
                   <span class="input-group-addon">С<sub>т</sub>&#8194;=</span>
-                  <input id="Ctverdoe" class="form-control" type="text" placeholder="введите теплоёмкость в-ва в твёрдом состоянии (Дж/(кг・C°))">
+                  <input id="Ctverdoe" class="form-control" type="text" placeholder="введите теплоёмкость в-ва в твёрдом состоянии">
+                  <span class="input-group-addon">  Дж/(кг・C°) </span>
                 </div>
                 <div class="input-group">
                   <span class="input-group-addon">&#160;L &#8194;=</span>
-                  <input id="l" class="form-control" type="text" placeholder="введите удельную теплоту парообразования в-ва (Дж/кг)">
+                  <input id="l" class="form-control" type="text" placeholder="введите удельную теплоту парообразования в-ва">
+                  <span class="input-group-addon">  Дж/кг </span>
                 </div>
                 <div class="input-group">
                   <span class="input-group-addon">&#160;λ&#160;&#160;=</span>
-                  <input id="lambda" class="form-control" type="text" placeholder="введите удельную теплоту плавления в-ва (Дж/кг)">
+                  <input id="lambda" class="form-control" type="text" placeholder="введите удельную теплоту плавления в-ва">
+                  <span class="input-group-addon">  Дж/кг </span>
                 </div>
                 <div class="btn-group btn-group-justified">
                   <button class="btn btn-default" style="width:50%" onclick="pob()">температура понижается</button>
