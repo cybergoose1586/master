@@ -34,11 +34,11 @@ def login(request):
         username = request.POST.get('username', '')
         password = request.POST.get('password', '')
         user = auth.authenticate(username=username, password=password)
-        if user is not None:
+        if user is not None and user.is_active:
             auth.login(request, user)
-            return HttpResponseRedirect('visual/')
+            return HttpResponseRedirect('visual')
         else:
-            return HttpResponseRedirect("enter/error")
+            return HttpResponseRedirect("error")
     else:
         return render_to_response('enter.html', args)
 
