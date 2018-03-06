@@ -1,5 +1,4 @@
 import os
-ALLOWED_HOSTS = ['127.0.0.1', '<admin>.pythonanywhere.com', '<rainbowwweg>.pythonanywhere.com']
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
@@ -15,6 +14,7 @@ SECRET_KEY = '(nqebw*8arkpa2(yolu883+p!ybxw_%)i#fe*(l6!ui#m(%%1^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+ALLOWED_HOSTS = ['127.0.0.1', '<admin>.pythonanywhere.com', 'rainbowwweg.pythonanywhere.com']
 
 # Application definition
 
