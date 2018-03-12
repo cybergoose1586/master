@@ -4,6 +4,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+ALLOWED_HOSTS = ['127.0.0.1', '<admin>.pythonanywhere.com', 'rainbowwweg.pythonanywhere.com']
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
