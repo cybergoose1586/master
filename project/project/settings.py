@@ -4,7 +4,6 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
@@ -13,8 +12,6 @@ SECRET_KEY = '(nqebw*8arkpa2(yolu883+p!ybxw_%)i#fe*(l6!ui#m(%%1^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = ['127.0.0.1', '<admin>.pythonanywhere.com', 'rainbowwweg.pythonanywhere.com']
 
 # Application definition
 
