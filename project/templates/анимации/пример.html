@@ -11,14 +11,21 @@
         var canvas = document.getElementById("myCanvas");
         var ctx = canvas.getContext("2d");
         var ballRadius = 10
-        var ballRadius1 = 10
+        var ballRadius2 = 10
+        var ballRadius3 = 10
         var x = canvas.width/2
         var y = canvas.height-30
         var x2 = 310
         var y2 = 210
+        var x3 = 290
+        var y3 = 270
         
-        var dx = Math.random(1,5)
-        var dy = (-1,-5)
+        var dx = Math.random(-5,5)
+        var dy = (1,-5)
+        var dx2 = Math.random(-5,5)
+        var dy2 = (5,-5)
+        var dx3 = Math.random(-5,5)
+        var dy3 = (5,-5)
 
         function drawBall() {
             ctx.beginPath();
@@ -27,9 +34,16 @@
             ctx.fill();
             ctx.closePath();
         }
-        function drawBall1() {
+        function drawBall2() {
             ctx.beginPath();
-            ctx.arc(x2, y2, ballRadius, 0, Math.PI*2);
+            ctx.arc(x2, y2, ballRadius2, 0, Math.PI*2);
+            ctx.fillStyle = "#0095DD";
+            ctx.fill();
+            ctx.closePath();
+        }
+        function drawBall3() {
+            ctx.beginPath();
+            ctx.arc(x3, y3, ballRadius3, 0, Math.PI*2);
             ctx.fillStyle = "#0095DD";
             ctx.fill();
             ctx.closePath();
@@ -41,26 +55,42 @@
         
         
             
-            if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+            if(x + dx > canvas.width-ballRadius || x + dx < ballRadius ) {
                 dx = -dx;
             }
-            if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
+            if(y + dy > canvas.height-ballRadius || y + dy < ballRadius ) {
                 dy = -dy;
             }
-            
-            drawBall1()
-
-             if(x2 + dx > canvas.width-ballRadius1 || x2+ dx < ballRadius1) {
-                dx = -dx;
-            }
-            if(y2 + dy > canvas.height-ballRadius1 || y2 + dy < ballRadius1) {
-                dy = -dy;
-            }
-
             x += dx;
             y += dy;
-            x2 += dx;
-            y2 += dy;
+
+            drawBall2()
+
+             if(x2 + dx2 > canvas.width-ballRadius2 || x2+ dx2 < ballRadius2 ) {
+                dx2 = -dx2;
+            }
+            if(y2 + dy2 > canvas.height-ballRadius2 || y2 + dy2 < ballRadius2 ) 
+            {
+                dy2 = -dy2;
+            }
+
+           
+            x2 += dx2;
+            y2 += dy2;
+
+            drawBall3()
+
+             if(x3 + dx3 > canvas.width-ballRadius3 || x3+ dx3 < ballRadius3 ) {
+                dx3 = -dx3;
+            }
+            if(y3 + dy3 > canvas.height-ballRadius3 || y3 + dy3 < ballRadius3 ) 
+            {
+                dy3 = -dy3;
+            }
+
+           
+            x3 += dx3;
+            y3 += dy3;
         }
 
         setInterval(draw, 0);
