@@ -1,48 +1,70 @@
 <html> 
-<head> 
-<style> 
-canvas { background: rgb(87, 79, 79); } 
-body{background: black}
-</style> 
-</head> 
-<body> 
-<canvas id="myCanvas" width="480" height="420"></canvas>
-<script> 
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-var ballRadius = 10;
-var x = canvas.width/2;
-var y = canvas.height-30;
-var dx = 2;
-var dy = -2;
+    <head> 
+        <style> 
+        canvas { background: rgb(87, 79, 79); } 
+        body{background: black}
+        </style> 
+    </head> 
+    <body> 
+        <canvas id="myCanvas" width="480" height="420"></canvas>
+        <script> 
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        var ballRadius = 10
+        var ballRadius1 = 10
+        var x = canvas.width/2
+        var y = canvas.height-30
+        var x2 = 310
+        var y2 = 210
+        
+        var dx = Math.random(1,5)
+        var dy = (-1,-5)
 
-function drawBall() {
-    ctx.beginPath();
-    ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-    
-    
-}
+        function drawBall() {
+            ctx.beginPath();
+            ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+            ctx.fillStyle = "#0095DD";
+            ctx.fill();
+            ctx.closePath();
+        }
+        function drawBall1() {
+            ctx.beginPath();
+            ctx.arc(x2, y2, ballRadius, 0, Math.PI*2);
+            ctx.fillStyle = "#0095DD";
+            ctx.fill();
+            ctx.closePath();
+        }
 
-function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawBall();
-    
-    if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-        dx = -dx;
-    }
-    if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-        dy = -dy;
-    }
-    
-    x += dx;
-    y += dy;
-}
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawBall();
+        
+        
+            
+            if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+                dx = -dx;
+            }
+            if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
+                dy = -dy;
+            }
+            
+            drawBall1()
 
-setInterval(draw, 0);
+             if(x2 + dx > canvas.width-ballRadius1 || x2+ dx < ballRadius1) {
+                dx = -dx;
+            }
+            if(y2 + dy > canvas.height-ballRadius1 || y2 + dy < ballRadius1) {
+                dy = -dy;
+            }
 
-</script> 
-</body> 
+            x += dx;
+            y += dy;
+            x2 += dx;
+            y2 += dy;
+        }
+
+        setInterval(draw, 0);
+
+        </script> 
+    </body> 
 </html>

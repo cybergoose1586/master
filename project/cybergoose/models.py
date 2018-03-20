@@ -15,7 +15,7 @@ class Substance(models.Model):
         return ' '.join([
             self.name,
 
-            str(self.cSolid),
+            str(self.cSolid),zzz
         ])
 
 class Atmosphere(models.Model):
