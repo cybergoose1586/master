@@ -55,10 +55,10 @@
         
         
             
-            if(x + dx > canvas.width-ballRadius || x + dx < ballRadius ) {
+            if(x + dx > canvas.width-ballRadius || x + dx < ballRadius || x + dx > ballRadius2.width || x + dx > ballRadius3.width) {
                 dx = -dx;
             }
-            if(y + dy > canvas.height-ballRadius || y + dy < ballRadius ) {
+            if(y + dy > canvas.height-ballRadius || y + dy < ballRadius || x + dx > ballRadius2.height || x + dx > ballRadius3.height) {
                 dy = -dy;
             }
             x += dx;
@@ -93,7 +93,8 @@
             y3 += dy3;
         }
 
-        setInterval(draw, 0);
+
+        setInterval(draw, -60);
 
         </script> 
     </body> 
