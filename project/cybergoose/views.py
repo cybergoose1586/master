@@ -36,9 +36,9 @@ def login(request):
         user = auth.authenticate(username=username, password=password)
         if user is not None and user.is_active:
             auth.login(request, user)
-            return HttpResponseRedirect('visual')
+            return redirect('visual')
         else:
-            return HttpResponseRedirect("error")
+            return redirect("error")
     else:
         return render_to_response('enter.html', args)
 
