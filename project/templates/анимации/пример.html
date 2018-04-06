@@ -21,11 +21,11 @@
         var y3 = 270
         
         var dx = Math.random(-5,5)
-        var dy = Math.random(1,-5)
+        var dy = Math.random(-5,5)
         var dx2 = Math.random(-5,5)
-        var dy2 = Math.random(5,-5)
+        var dy2 = Math.random(-5,5)
         var dx3 = Math.random(-5,5)
-        var dy3 = Math.random(5,-5)
+        var dy3 = Math.random(-5,5)
 
         function drawBall() {
             ctx.beginPath();
@@ -55,10 +55,10 @@
         
         
             
-            if(x + dx > canvas.width-ballRadius || x + dx < ballRadius || x + dx > ballRadius2.width || x + dx > ballRadius3.width) {
+            if(x + dx > canvas.width-ballRadius || x + dx < ballRadius || x + x2 == ballRadius) {
                 dx = -dx;
             }
-            if(y + dy > canvas.height-ballRadius || y + dy < ballRadius || x + dx > ballRadius2.height || x + dx > ballRadius3.height) {
+            if(y + dy > canvas.height-ballRadius || y + dy < ballRadius  || y + y2 == ballRadius ) {
                 dy = -dy;
             }
             x += dx;
@@ -66,10 +66,10 @@
 
             drawBall2()
 
-             if(x2 + dx2 > canvas.width-ballRadius2 || x2+ dx2 < ballRadius2 ) {
+             if(x2 + dx2 > canvas.width-ballRadius2 || x2+ dx2 < ballRadius2 || x + dy == x2 + dx2 == x3 + dx3) {
                 dx2 = -dx2;
             }
-            if(y2 + dy2 > canvas.height-ballRadius2 || y2 + dy2 < ballRadius2 ) 
+            if(y2 + dy2 > canvas.height-ballRadius2 || y2 + dy2 < ballRadius2 || y + dy == y2 + dy2 == y3 +dy3 ) 
             {
                 dy2 = -dy2;
             }
@@ -80,10 +80,10 @@
 
             drawBall3()
 
-             if(x3 + dx3 > canvas.width-ballRadius3 || x3+ dx3 < ballRadius3 ) {
+             if(x3 + dx3 > canvas.width-ballRadius3 || x3+ dx3 < ballRadius3 || x + dy == x2 + dx2 == x3 +dx3) {
                 dx3 = -dx3;
             }
-            if(y3 + dy3 > canvas.height-ballRadius3 || y3 + dy3 < ballRadius3 ) 
+            if(y3 + dy3 > canvas.height-ballRadius3 || y3 + dy3 < ballRadius3 || y + dy == y2 + dy2 == y3 +dy3 ) 
             {
                 dy3 = -dy3;
             }
