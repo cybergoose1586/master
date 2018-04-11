@@ -27,6 +27,8 @@
         var dx3 = Math.random(-5,5)
         var dy3 = Math.random(-5,5)
 
+        
+
         function drawBall() {
             ctx.beginPath();
             ctx.arc(x, y, ballRadius, 0, Math.PI*2);
@@ -92,6 +94,7 @@
             x3 += dx3;
             y3 += dy3;
         }
+
 
 
         setInterval(draw, -60);
