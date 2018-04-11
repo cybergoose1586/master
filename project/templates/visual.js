@@ -383,3 +383,12 @@ type: 'scatter',
 data: data, 
 options: option 
 });
+
+function water(){
+  document.getElementById('tplav').value="0";
+  document.getElementById('tparoobraz').value="100";
+  document.getElementById('Czhidkoe').value="4200";
+   document.getElementById('Ctverdoe').value="2100";
+ document.getElementById('l').value="2258";
+ document.getElementById('lambda').value="340000";
+}
